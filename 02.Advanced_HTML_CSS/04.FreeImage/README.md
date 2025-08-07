@@ -38,14 +38,6 @@
   1. 到 [cdnjs](https://cdnjs.com/) 搜尋 Font Awesome CDN 並貼到 HTML 中。
   2. 直接複製 icon 對應標籤，貼到程式中即可使用。
 
-  例如：
-
-  ```html
-  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
-  <i class="fa-solid fa-house"></i>
-````
-
----
 
 ### 3️⃣ [unDraw](https://undraw.co/illustrations)
 
@@ -53,26 +45,12 @@
 * 無需註冊即可下載使用，適用於網頁與簡報。
 * 可用於商業用途。
 
----
 
-## ✅ 小提醒
 
-| 資源              | 商業使用 | 是否需註明來源      | 格式           |
-| --------------- | ---- | ------------ | ------------ |
-| Google 圖片（工具篩選） | ✅    | 視來源而定        | PNG / JPG    |
-| Unsplash        | ✅    | ❌（建議標示）      | JPG          |
-| Pexels          | ✅    | ❌            | JPG / MP4    |
-| iStock          | ✅    | ✅（付費授權）      | 多種格式         |
-| Icons8          | ✅    | ✅（免費需附連結）    | PNG / SVG    |
-| Font Awesome    | ✅    | ❌（使用 CDN 即可） | 字型 / HTML 標籤 |
-| unDraw          | ✅    | ❌            | SVG          |
 
----
 
-## 📌 建議做法
 
-* 商業專案一律使用授權明確的圖片（Unsplash、Pexels、unDraw）。
-* 使用 Icons8 時記得附上出處連結。
-* 若網站部署到正式環境，**避免直接從 Google 複製圖片**，請確認授權或使用圖庫來源。
+
+
 
 
