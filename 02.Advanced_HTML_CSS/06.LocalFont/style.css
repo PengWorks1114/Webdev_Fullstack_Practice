@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "myFont";
+  src: url("./目標字體檔案");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "第一順位顯示 目標字體", DFkai-sb, sans-serif;
+}
