@@ -48,7 +48,7 @@ nav ul li a {
   /* 去掉底線 */
   font-size: 1.25rem;
   transition: all 0.3s ease;
-  /* 所有動作反應需要在0.3秒內顯示 */
+  /* 所有動作反應需要在0.3秒內顯示改變 */
 }
 
 nav ul li a:hover {
@@ -58,4 +58,10 @@ nav ul li a:hover {
 
 .active {
   color: yellow;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  /* 為了在手機端也可以伸縮顯示 */
 }
