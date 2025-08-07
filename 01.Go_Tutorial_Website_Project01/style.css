@@ -47,6 +47,13 @@ nav ul li a {
   text-decoration: none;
   /* 去掉底線 */
   font-size: 1.25rem;
+  transition: all 0.3s ease;
+  /* 所有動作反應需要在0.3秒內顯示 */
+}
+
+nav ul li a:hover {
+  cololr: yellow;
+  /* 滑鼠移動到上方會變黃色 */
 }
 
 .active {
