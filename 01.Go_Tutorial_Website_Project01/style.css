@@ -128,3 +128,75 @@ section.right ul {
   font-size: 1.05rem;
   color: rgb(6, 120, 120);
 }
+
+div.japan {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+div.japan .image {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+}
+
+div.japan .image img {
+  width: 100%;
+}
+
+div.japan .info {
+  flex: 3 1 600px;
+  padding: 2rem;
+}
+
+div.competition {
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+div.competition div.text {
+  flex: 5 1 300px;
+  padding: 1rem;
+}
+
+div.competition div.text h3 {
+  font-size: 2rem;
+  color: rgb(12, 122, 92);
+}
+
+#piechart {
+  flex: 1 1 300px;
+}
+
+section.taiwan h3 {
+  font-size: 2rem;
+  color: rgb(12, 122, 92);
+}
+
+.china h3 {
+  color: rgb(12, 122, 92);
+  font-size: 2rem;
+}
+
+.china table,
+.china th,
+.china td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 2px 4px;
+}
+
+.china table {
+  min-width: 1000px;
+}
+
+.china th {
+  background-color: rgb(86, 224, 192);
+  color: white;
+}
+
+.taiwan ul {
+  margin-left: 2rem;
+}
