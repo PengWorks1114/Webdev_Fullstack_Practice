@@ -13,6 +13,7 @@
       google.charts.load("current", { packages: ["corechart"] });
       google.charts.setOnLoadCallback(drawChart);
 
+    //   google charts 的用法,把網路上設定好的script標籤部分直接貼過來(貼在link上面)
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ["棋賽", "獎金(日幣)"],
@@ -108,6 +109,7 @@
             </ul>
           </div>
           <div id="piechart"></div>
+          <!-- 再把piechart貼過來要顯示的位置 -->
         </div>
       </section>
     </main>
