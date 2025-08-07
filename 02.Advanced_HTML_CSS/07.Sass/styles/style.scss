@@ -1,3 +1,5 @@
+$themeColor: red;
+
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +14,19 @@ header {
       li {
         list-style: none;
         a {
-          color: red($color: #000000);
+          color: $themeColor;
           text-decoration: none;
         }
       }
     }
   }
+}
+
+h1 {
+  color: $themeColor;
+}
+// 這裡用變數設定顏色 這樣以後只要改一個變數就可以全部修改顏色
+
+h2 {
+  color: $themeColor;
 }

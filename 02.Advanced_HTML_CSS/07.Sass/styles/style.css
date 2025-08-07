@@ -12,6 +12,14 @@ header nav ul li {
   list-style: none;
 }
 header nav ul li a {
-  color: 0;
+  color: red;
   text-decoration: none;
+}
+
+h1 {
+  color: red;
+}
+
+h2 {
+  color: red;
 }/*# sourceMappingURL=style.css.map */
