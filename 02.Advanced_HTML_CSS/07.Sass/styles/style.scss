@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  nav {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        list-style: none;
+        a {
+          color: red($color: #000000);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
