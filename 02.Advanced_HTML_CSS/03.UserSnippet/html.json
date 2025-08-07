@@ -1,0 +1,18 @@
+{
+  "繁體中文html的snippet": {
+    "prefix": "!zh",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"zh-Hant\">",
+      "  <head>",
+      "    <meta charset=\"UTF-8\" />",
+      "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
+      "    <title>網站名稱</title>",
+      "  </head>",
+      "  <body></body>",
+      "</html>",
+      ""
+    ],
+    "description": "繁體中文html的snippet"
+  }
+}
