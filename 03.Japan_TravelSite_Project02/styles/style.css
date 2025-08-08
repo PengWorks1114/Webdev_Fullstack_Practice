@@ -87,8 +87,23 @@ main section.info-circles h3 {
   font-size: 2rem;
 }
 main section.info-circles div.circles {
-  border: 3px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 main section.info-circles div.circles div.circle {
-  border: 3px solid red;
+  padding: 1rem;
+  flex: 0 1 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section.info-circles div.circles div.circle img {
+  width: 80%;
+  border-radius: 50%;
+  transition: all 0.1s ease-in;
+  padding: 0.3rem;
+}
+main section.info-circles div.circles div.circle img:hover {
+  border: 3px solid;
 }/*# sourceMappingURL=style.css.map */
