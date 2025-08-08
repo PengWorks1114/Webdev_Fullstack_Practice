@@ -98,5 +98,23 @@ main {
       text-align: center;
       //文字置中
     }
+  } //backgroundimage
+
+  section.info-circles {
+    background-color: white;
+    padding: 2rem 1rem;
+
+    h3 {
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    div.circles {
+      border: 3px solid black;
+
+      div.circle {
+        border: 3px solid red;
+      }
+    }
   }
 }
