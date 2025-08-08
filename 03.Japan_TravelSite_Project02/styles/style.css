@@ -58,4 +58,23 @@ main section.background-img {
   background-size: cover;
   background-position: center;
   transition: all 0.75s ease;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section.background-img div.filter {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 70vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+main section.background-img h3 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

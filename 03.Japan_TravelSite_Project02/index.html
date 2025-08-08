@@ -43,8 +43,24 @@
       <section class="background-img">
         <div class="filter"></div>
         <!-- 圖片前面的黑色遮罩 -->
-        <h3>休閒空間-特殊假期-安排一趟日本旅遊行程-放鬆身心</h3>
+        <h3>休閒空間-特殊假期<br />安排一趟日本旅遊行程-放鬆身心</h3>
       </section>
     </main>
+    <script>
+      setInterval(() => {
+        let topBackground = document.querySelector("section.background-img");
+        if (
+          topBackground.style.backgroundImage == 'url("../images/日本櫻花.jpg")'
+        ) {
+          topBackground.style.backgroundImage = 'url("../images/京都古城.jpg")';
+        } else if (
+          topBackground.style.backgroundImage == 'url("../images/京都古城.jpg")'
+        ) {
+          topBackground.style.backgroundImage = 'url("../images/大阪街頭.jpg")';
+        } else {
+          topBackground.style.backgroundImage = 'url("../images/日本櫻花.jpg")';
+        }
+      }, 3000); //每3秒換一張圖片
+    </script>
   </body>
 </html>
