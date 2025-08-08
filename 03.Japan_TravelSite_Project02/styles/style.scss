@@ -1,5 +1,38 @@
+$themeColor: rgba(152, 57, 255, 0.5);
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+
+  section.logo {
+    border: 2px solid green;
+    display: flex;
+    h1 {
+      font-size: 2.5rem;
+    }
+    img {
+      width: 6vw;
+      height: 6vw;
+    }
+  }
+
+  nav {
+    border: 2px solid red;
+  }
 }
