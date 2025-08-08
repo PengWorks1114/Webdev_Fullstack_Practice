@@ -19,10 +19,13 @@ header {
   background-color: white;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 
   section.logo {
-    border: 2px solid green;
+    flex: 2 1 400px;
     display: flex;
+    align-items: center;
+
     h1 {
       font-size: 2.5rem;
     }
@@ -33,6 +36,28 @@ header {
   }
 
   nav {
-    border: 2px solid red;
+    flex: 5 1 500px;
+    ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+      //   各自取距離展開
+      li {
+        a {
+          color: black;
+          text-decoration: none;
+          font-size: 1.35rem;
+          transition: all 0.2s ease;
+          // 全部的物件要在0.2秒內
+          padding-bottom: 0.3rem;
+          &:hover {
+            color: $themeColor;
+            border-bottom: 3px solid $themeColor;
+            // 下面會出現底線
+          }
+          // 滑鼠放上去
+        }
+      }
+    }
   }
 }
