@@ -68,4 +68,20 @@ body main section.main-area div.image-area {
 }
 body main section.main-area div.image-area img {
   width: 80%;
+}
+body main section.about-me {
+  background-color: rgba(167, 173, 243, 0.5);
+  padding: 5rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+body main section.about-me section.description {
+  width: 50%;
+  text-align: center;
+}
+body main section.about-me section.description h2 {
+  font-size: 2rem;
+}
+body main section.about-me section.description .progress-bar-area p {
+  margin-top: 1rem;
 }/*# sourceMappingURL=style.css.map */
