@@ -33,4 +33,16 @@ body {
       }
     }
   }
+
+  main {
+    section.main-area {
+      min-height: 70vh;
+      background-color: white;
+      display: flex; //排版橫向並排
+      flex-wrap: wrap; //超過設定大小換行
+
+      div.info {
+      }
+    }
+  }
 }

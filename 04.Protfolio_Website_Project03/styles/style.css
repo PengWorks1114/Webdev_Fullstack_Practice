@@ -30,4 +30,10 @@ body nav ul li a {
 }
 body nav ul li a:hover {
   color: rgb(54, 141, 212);
+}
+body main section.main-area {
+  min-height: 70vh;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */
