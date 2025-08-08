@@ -15,124 +15,149 @@ h6 {
   font-weight: normal;
 }
 
-header {
-  background-color: white;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+body {
+  position: relative;
 
-  section.logo {
-    flex: 2 1 400px;
+  img.fixed-image {
+    min-height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: -5;
+    bottom: 0;
+    left: 0;
+  }
+  header {
+    background-color: white;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 
-    h1 {
-      font-size: 2.5rem;
-    }
-    img {
-      width: 6vw;
-      height: 6vw;
-    }
-  }
-
-  nav {
-    flex: 5 1 500px;
-    ul {
+    section.logo {
+      flex: 2 1 400px;
       display: flex;
-      list-style-type: none;
-      justify-content: space-around;
-      //   各自取距離展開
-      li {
-        a {
-          color: black;
-          text-decoration: none;
-          font-size: 1.35rem;
-          transition: all 0.2s ease;
-          // 全部的物件要在0.2秒內
-          padding-bottom: 0.3rem;
-          &:hover {
-            color: $themeColor;
-            border-bottom: 3px solid $themeColor;
-            // 下面會出現底線
+      align-items: center;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+      img {
+        width: 6vw;
+        height: 6vw;
+      }
+    }
+
+    nav {
+      flex: 5 1 500px;
+      ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        //   各自取距離展開
+        li {
+          a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.35rem;
+            transition: all 0.2s ease;
+            // 全部的物件要在0.2秒內
+            padding-bottom: 0.3rem;
+            &:hover {
+              color: $themeColor;
+              border-bottom: 3px solid $themeColor;
+              // 下面會出現底線
+            }
+            // 滑鼠放上去
           }
-          // 滑鼠放上去
         }
       }
     }
   }
-}
 
-main {
-  section.background-img {
-    // 設定背景圖片
-    min-height: 70vh;
-    background-image: url("../images/日本櫻花.jpg");
-    background-size: cover;
-    background-position: center;
-    transition: all 0.75s ease;
-    position: relative;
-    //參考位置相對
-    z-index: 0;
-    //stacking context
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    //將物件置中
-
-    div.filter {
-      background-color: rgba(0, 0, 0, 0.5);
-      // rgb都是0所以是黑色 最後的0.5是透明度
-      width: 100%;
+  main {
+    section.background-img {
+      // 設定背景圖片
       min-height: 70vh;
-      position: absolute;
-      // 參考點就是上面的background-img
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
+      background-image: url("../images/日本櫻花.jpg");
+      background-size: cover;
+      background-position: center;
+      transition: all 0.75s ease;
+      position: relative;
+      //參考位置相對
+      z-index: 0;
+      //stacking context
 
-    h3 {
-      color: white;
-      font-size: 2.5rem;
-      text-align: center;
-      //文字置中
-    }
-  } //backgroundimage
-
-  section.info-circles {
-    background-color: white;
-    padding: 2rem 1rem;
-
-    h3 {
-      text-align: center;
-      font-size: 2rem;
-    }
-
-    div.circles {
-      //   border: 3px solid black;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
+      //將物件置中
 
-      div.circle {
-        padding: 1rem;
-        // border: 3px solid red;
-        flex: 0 1 250px;
+      div.filter {
+        background-color: rgba(0, 0, 0, 0.5);
+        // rgb都是0所以是黑色 最後的0.5是透明度
+        width: 100%;
+        min-height: 70vh;
+        position: absolute;
+        // 參考點就是上面的background-img
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      h3 {
+        color: white;
+        font-size: 2.5rem;
+        text-align: center;
+        //文字置中
+      }
+    } //backgroundimage
+
+    section.info-circles {
+      background-color: white;
+      padding: 2rem 1rem;
+
+      h3 {
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      div.circles {
+        //   border: 3px solid black;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
 
-        img {
-          width: 80%;
-          border-radius: 50%;
-          //   設定成圓形
-          transition: all 0.1s ease-in;
-          padding: 0.3rem;
-          &:hover {
-            border: 3px solid;
+        div.circle {
+          padding: 1rem;
+          // border: 3px solid red;
+          flex: 0 1 250px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          img {
+            width: 80%;
+            border-radius: 50%;
+            //   設定成圓形
+            transition: all 0.1s ease-in;
+            padding: 0.3rem;
+            &:hover {
+              border: 3px solid $themeColor;
+            }
           }
         }
+      }
+    }
+
+    section.empty-container {
+      min-height: 70vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        font-size: 2rem;
+        color: white;
       }
     }
   }
