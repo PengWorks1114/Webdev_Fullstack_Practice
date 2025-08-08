@@ -32,6 +32,11 @@ body {
     flex-wrap: wrap;
     align-items: center;
 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 10px 6px -6px #777;
+
     section.logo {
       flex: 2 1 400px;
       display: flex;
