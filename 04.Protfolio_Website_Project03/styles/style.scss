@@ -12,3 +12,25 @@ h5,
 h6 {
   font-weight: normal;
 }
+
+body {
+  nav {
+    background-color: white;
+    ul {
+      display: flex;
+      li {
+        list-style-type: none;
+        // 這樣設定他才會橫著並排
+        margin: 1rem;
+        a {
+          color: black;
+          text-decoration: none;
+          transition: all 0.1s ease;
+          &:hover {
+            color: rgb(54, 212, 138);
+          }
+        }
+      }
+    }
+  }
+}
