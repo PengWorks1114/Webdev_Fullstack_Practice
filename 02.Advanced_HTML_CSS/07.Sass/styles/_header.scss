@@ -1,0 +1,24 @@
+@mixin flexbox {
+  display: flex;
+}
+
+header {
+  nav {
+    ul {
+      @include flexbox;
+      flex-wrap: wrap;
+      li {
+        list-style: none;
+        a {
+          color: $themeColor;
+          text-decoration: none;
+          &:hover {
+            color: blue;
+          }
+          //   用&符號 這樣就不用再寫一次自己的tag了(a)
+          // hover是當滑鼠放上去會做的變色
+        }
+      }
+    }
+  }
+}
