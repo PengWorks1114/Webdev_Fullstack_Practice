@@ -1,3 +1,5 @@
+$themecolor: rgb(54, 141, 212);
+
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +29,7 @@ body {
           text-decoration: none;
           transition: all 0.1s ease;
           &:hover {
-            color: rgb(54, 141, 212);
+            color: $themecolor;
           }
         }
       }
@@ -40,8 +42,40 @@ body {
       background-color: white;
       display: flex; //排版橫向並排
       flex-wrap: wrap; //超過設定大小換行
+      justify-content: center; //置中排列
+      align-items: center;
 
       div.info {
+        flex-basis: 450px;
+        padding: 3rem;
+        h1 {
+          font-size: 3.5rem;
+        }
+        h2 {
+          font-size: 1rem;
+        }
+        a {
+          color: white;
+          background-color: $themecolor;
+          padding: 0.25rem 0.5rem;
+          font-size: 1.5rem;
+          border-radius: 20px;
+          display: inline-block;
+          margin-top: 2rem;
+          text-decoration: none;
+          transition: all 0.2s ease;
+          &:hover {
+            transform: scale(1.2);
+            //放大1.2倍
+          }
+        }
+      }
+
+      div.image-area {
+        flex-basis: 450px;
+        img {
+          width: 80%;
+        }
       }
     }
   }

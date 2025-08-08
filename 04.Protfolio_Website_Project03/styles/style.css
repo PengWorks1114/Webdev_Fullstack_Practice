@@ -36,4 +36,36 @@ body main section.main-area {
   background-color: white;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main section.main-area div.info {
+  flex-basis: 450px;
+  padding: 3rem;
+}
+body main section.main-area div.info h1 {
+  font-size: 3.5rem;
+}
+body main section.main-area div.info h2 {
+  font-size: 1rem;
+}
+body main section.main-area div.info a {
+  color: white;
+  background-color: rgb(54, 141, 212);
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+body main section.main-area div.info a:hover {
+  transform: scale(1.2);
+}
+body main section.main-area div.image-area {
+  flex-basis: 450px;
+}
+body main section.main-area div.image-area img {
+  width: 80%;
 }/*# sourceMappingURL=style.css.map */
