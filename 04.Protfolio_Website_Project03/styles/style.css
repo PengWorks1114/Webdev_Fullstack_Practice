@@ -41,7 +41,7 @@ body main section.main-area {
 }
 body main section.main-area div.info {
   flex-basis: 450px;
-  padding: 3rem;
+  padding: 1rem;
 }
 body main section.main-area div.info h1 {
   font-size: 3.5rem;
