@@ -122,6 +122,7 @@ sass style.scss style.css
 ├── style.css             # 編譯後的 CSS
 ├── style.css.map         # 對應來源 map（方便除錯）
 ```
+⚠️ 不可直接引入 `.scss` 檔案。
 
 ---
 
@@ -161,5 +162,5 @@ ex. theme color
 先在@mixin 名稱 { 之中寫下 } 接著在要使用的地方用@include 名稱; 去呼叫
 ```
 
-⚠️ 不可直接引入 `.scss` 檔案。
+
 
