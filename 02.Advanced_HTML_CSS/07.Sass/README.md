@@ -133,5 +133,33 @@ HTML 中只需引入編譯後的 CSS 檔案：
 <link rel="stylesheet" href="./styles/style.css" />
 ```
 
+
+## 小筆記
+```
+Sass常見功能:
+1.Nested CSS 巢狀語法:
+可以在scss裡面直接編寫 就不用一個一個在css裡面個別打 動作更快 後續編譯更容易
+
+2.變數設定
+
+ex. theme color
+
+3.self ampersand
+
+用&就不用再打一次自己的標籤了
+
+4.import
+
+好處:1.分類2.重複利用 創建方法:自己額外建立一個scss檔案,開頭必須是_底線
+
+接著在原本的scss 中使用 @import “檔案名稱” 去呼叫他
+
+5.mixin
+
+類似method fun
+
+先在@mixin 名稱 { 之中寫下 } 接著在要使用的地方用@include 名稱; 去呼叫
+```
+
 ⚠️ 不可直接引入 `.scss` 檔案。
 
