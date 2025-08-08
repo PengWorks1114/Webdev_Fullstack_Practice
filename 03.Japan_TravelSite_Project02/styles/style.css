@@ -127,4 +127,20 @@ body main section.empty-container {
 body main section.empty-container h3 {
   font-size: 2rem;
   color: white;
+}
+body main section.google-map {
+  background-color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+body main section.google-map h3 {
+  font-size: 2.5rem;
+}
+body main section.google-map p {
+  font-size: 1.25rem;
+  margin: 1rem;
+}
+body main section.google-map iframe {
+  width: 100%;
+  height: 40vh;
 }/*# sourceMappingURL=style.css.map */
