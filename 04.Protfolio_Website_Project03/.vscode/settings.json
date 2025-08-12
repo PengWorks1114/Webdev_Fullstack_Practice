@@ -1,0 +1,27 @@
+{
+  "cSpell.ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/*.min.*",
+    "**/*.map",
+    "**/.git/**",
+    "**/.vscode/**"
+  ],
+  "liveSassCompile.settings.includeItems": [
+    "/styles/style.scss" // ✅ 以 / 開頭，指定檔案
+  ],
+  "liveSassCompile.settings.excludeList": [
+    "/node_modules/**", // ✅ 以 / 開頭
+    "/project2/**" // ✅ 以 / 開頭
+  ],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/styles"
+    }
+  ],
+  "liveSassCompile.settings.generateMap": true
+}
