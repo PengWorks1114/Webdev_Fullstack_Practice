@@ -1,0 +1,7 @@
+JS中可以自訂議fun:
+
+function name([param[,param]]) {
+    statements
+}
+
+parm 參數
