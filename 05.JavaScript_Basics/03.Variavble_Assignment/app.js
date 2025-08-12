@@ -1,3 +1,6 @@
-console.log("Hello World");
-let user_name = window.prompt("請輸入你的姓名: ");
-window.alert("歡迎來到此網站" + user_name);
+let x; // declare a variable
+x = 10; // variable assignment
+
+console.log(x); //看x的值為多少
+
+const y = 2; //const 一定要宣告初始值
