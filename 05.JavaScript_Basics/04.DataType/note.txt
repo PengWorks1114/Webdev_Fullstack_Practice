@@ -1,22 +1,19 @@
-變數:Variable 変数
-賦值:Assignment　代入
+JS裡面有七種基本數據類型:
+1.Number:
+整數與帶小數點的數字.
+ex.10/-4/-3.14
+2.BigInt:
+任意長度的整數.
+3.String:
+字串符
+4.Boolean:
+true/false
+5.null:
+用來代表某個故意不存在的值.
+6.undefined:
+未被賦值的變數,就是undefined.
+7.symbol:
+unique identifier.
 
-變數:可以儲存值得容器.但內部的值可以一直改變,所以稱為"變數"/不變的叫做常數
-賦值:
-x = 5, x = x + 1
-結果 x = 6
-=>js支援語法糖(syntax sugar) => x = x + 1 更改為 x += 1.
-
-變數:
-當我們在創造變數時候,要宣告變數.宣告變數之前,要先確此變數是否可能被修改.
-1.若變數的值會變動,則用let來宣告變數.
-2.若變數的值不會變動,則用const來宣告變數.(常數)
-3.不要使用var來宣告變數.
-
-需要特別注意的規則:
-1.用const來宣告的變數,一定需要馬上賦予初始值(initializer).
-let則不需要,若用let宣告了變數,但還沒有賦值,則變數的值是undefined.
-2.用const let 宣告過的變數 都不能重複被宣告(redeclaration is not allowed)
-ex.let x = 10; let x = 5; error//重複宣告
-let x = 10; x = 5; ok//賦值
-3.const不能做重複賦值(reassiginment is not allowed)
+除了這七種基本數據類型之外JS的第八種數據類型叫做object,
+屬於non-primitive data type.JS中的object可能是array,object或是function等等.

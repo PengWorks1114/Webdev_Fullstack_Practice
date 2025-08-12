@@ -1,6 +1,10 @@
-let x; // declare a variable
-x = 10; // variable assignment
+let x = 100;
+let y = 50;
 
-console.log(x); //看x的值為多少
-
-const y = 2; //const 一定要宣告初始值
+console.log(100 + 50);
+console.log(100 - 50);
+console.log(100 * 50);
+console.log(100 / 50);
+console.log(100 % 50); //mod
+console.log(100 ** 50); //** 100的50次方
+console.log(100 ++); // X = X + 1, X++, x+=1 同樣意思

@@ -1,122 +1,139 @@
-# 📝 JavaScript 基礎 - 變數與賦值（Variable & Assignment）
+# 📝 JavaScript 基礎 - 資料型別與運算符（Data Types & Operators）
 
-本專案示範 JavaScript 中 **變數（Variable）** 與 **賦值（Assignment）** 的基礎用法，並比較 `let` 與 `const` 的使用情境與差異。
+本專案示範 JavaScript 的 **八大資料型別** 以及基本 **數學運算符** 的使用方式，幫助初學者快速掌握 JS 基礎語法。
 
 ---
 
 ## 🎯 學習目標
 
-1. 瞭解變數的宣告與賦值方式。
-2. 認識 `let` 與 `const` 的差異與使用情境。
-3. 理解變數的可變性與常數的不可變性。
-4. 瞭解語法糖（Syntax Sugar）在賦值中的應用。
+1. 理解 JavaScript 中的七種 **原始資料型別（Primitive Data Types）** 與一種 **非原始資料型別（Non-Primitive Data Type）**。
+2. 熟悉加減乘除、取餘數（mod）、指數運算等數學運算符。
+3. 瞭解遞增運算（`++`）與簡寫賦值（`+=`）的差異與應用。
 
 ---
 
 ## 📂 專案結構
 
-| 檔案名稱     | 功能說明                                 |
-| ------------ | ---------------------------------------- |
-| `index.html` | 主頁面，引用 `app.js`                    |
-| `app.js`     | JS 實作範例：變數宣告、賦值、常數宣告    |
-| `note.txt`   | 學習筆記，包含變數與賦值的詳細解說與規則 |
+| 檔案名稱     | 功能說明                                                       |
+| ------------ | -------------------------------------------------------------- |
+| `index.html` | 主頁面，引用 `app.js`，執行 JS 程式碼 【出處：`index.html`】   |
+| `app.js`     | JavaScript 範例：變數宣告與基本運算符示範 【出處：`app.js`】   |
+| `note.txt`   | 學習筆記：JavaScript 八大資料型別詳細解說 【出處：`note.txt`】 |
 
 ---
 
-## 📝 主要程式碼
+## 📚 筆記整理 - JavaScript 八大資料型別
 
-```javascript
-let x; // 宣告變數（未賦值，值為 undefined）
-x = 10; // 賦值
+### **七種原始資料型別（Primitive Data Types）**
 
-console.log(x); // 輸出 x 的值
+1. **Number**
 
-const y = 2; // const 宣告常數，必須立即賦值
-```
+   - 表示整數或浮點數。
+   - 範例：
+
+     ```javascript
+     let a = 10;
+     let b = -4;
+     let c = -3.14;
+     ```
+
+2. **BigInt**
+
+   - 表示任意長度的整數。
+   - 範例：
+
+     ```javascript
+     let big = 1234567890123456789012345678901234567890n;
+     ```
+
+3. **String**
+
+   - 表示字串文字。
+   - 範例：
+
+     ```javascript
+     let name = "Hello World";
+     ```
+
+4. **Boolean**
+
+   - 表示邏輯值 `true` 或 `false`。
+   - 範例：
+
+     ```javascript
+     let isActive = true;
+     ```
+
+5. **null**
+
+   - 表示一個「刻意不存在」的值。
+   - 範例：
+
+     ```javascript
+     let emptyValue = null;
+     ```
+
+6. **undefined**
+
+   - 表示變數已宣告但尚未賦值。
+   - 範例：
+
+     ```javascript
+     let notAssigned;
+     console.log(notAssigned); // undefined
+     ```
+
+7. **Symbol**
+
+   - 表示唯一的識別符（unique identifier）。
+   - 範例：
+
+     ```javascript
+     let sym = Symbol("id");
+     ```
+
+---
+
+### **第八種資料型別（Non-Primitive Data Type）**
+
+8. **Object**
+
+   - 可以是陣列（array）、物件（object）、函式（function）等複合型資料。
+   - 範例：
+
+     ```javascript
+     let obj = { name: "Alice", age: 25 };
+     let arr = [1, 2, 3];
+     function greet() {
+       console.log("Hello");
+     }
+     ```
+
+---
+
+## 🔢 程式範例 - 基本數學運算
 
 【出處：`app.js`】
 
----
-
-## 📚 筆記整理（來自 `note.txt`）
-
-### 1. 基本定義
-
-- **變數 (Variable / 変数)**
-  可以儲存值的容器，內部的值可以變動，因此稱為「變數」。
-  若值不可變動，則稱為「常數 (Constant)」。
-- **賦值 (Assignment / 代入)**
-  將值賦予變數的過程，例如：
-
-  ```javascript
-  x = 5;
-  x = x + 1; // 結果 x = 6
-  ```
-
-  JavaScript 支援**語法糖（Syntax Sugar）**：
-
-  ```javascript
-  x += 1; // 等同於 x = x + 1
-  ```
-
----
-
-### 2. 變數宣告規則
-
-1. **依值是否會變動來選擇關鍵字**
-
-   - 若值會變動 → 使用 `let` 宣告。
-   - 若值不會變動 → 使用 `const` 宣告（常數）。
-   - **不要使用 `var`**（作用域與提升問題較多）。
-
-2. **賦值規則**
-
-   - `const` 宣告時**必須立即賦予初始值** (initializer)。
-   - `let` 可以只宣告不賦值，未賦值時預設為 `undefined`。
-
-3. **重複宣告與賦值**
-
-   - `const` 與 `let` 宣告的變數**不可重複宣告**（redeclaration not allowed）。
-
-     ```javascript
-     let x = 10;
-     let x = 5; // ❌ Error: 重複宣告
-     ```
-
-   - `let` 允許重新賦值：
-
-     ```javascript
-     let x = 10;
-     x = 5; // ✅ OK
-     ```
-
-   - `const` 不允許重新賦值（reassignment not allowed）：
-
-     ```javascript
-     const y = 2;
-     y = 5; // ❌ Error: 不能重新賦值
-     ```
-
----
-
-### 3. 常見錯誤示例
-
 ```javascript
-const a; // ❌ Error: const 必須初始化
-let b;   // ✅ OK，值為 undefined
+let x = 100;
+let y = 50;
 
-let c = 1;
-let c = 2; // ❌ Error: 重複宣告
-c = 2;     // ✅ OK
+console.log(100 + 50); // 加法
+console.log(100 - 50); // 減法
+console.log(100 * 50); // 乘法
+console.log(100 / 50); // 除法
+console.log(100 % 50); // 取餘數（mod）
+console.log(100 ** 50); // 指數運算（100 的 50 次方）
 
-const d = 10;
-d = 20;    // ❌ Error: const 不能重新賦值
+// 遞增運算
+// x = x + 1;  等同於 x++; 也等同於 x += 1;
 ```
 
 ---
 
-## 🚀 延伸練習
+## 🚀 後續練習
 
-- 建立一個 `score` 變數，使用 `let` 宣告並多次更新值。
-- 將 `score` 改為 `const`，觀察重新賦值時的錯誤訊息。
-- 練習使用語法糖（`+=`, `-=`, `*=`, `/=`）。
+1. 嘗試建立不同資料型別的變數，並用 `typeof` 檢查型別。
+2. 練習將 `x` 與 `y` 的值換成不同數字，觀察運算結果變化。
+3. 嘗試將 `BigInt` 與普通數字相加，觀察錯誤訊息。
