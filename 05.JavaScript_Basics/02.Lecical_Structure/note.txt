@@ -2,3 +2,16 @@ JavaScript函數:
 console.log():將message輸出到web控制台
 window.alert():指示瀏覽器顯示帶有可選消息的對話框,並等待用戶關閉對話框
 window.prompt():指示瀏覽器顯示帶有可選消息的對話框,提示用戶輸入一些文字,並等待用戶提交文字或取消對話框
+
+Lexical Structure:
+自然語言(我們在用的語言)的語法(Grammar) = 程式語言(Programming Language)的語法(Syntax)
+自然語言的單字(Vocab) = 程式語言的 reserved words
+
+基本規則:
+1.JS中大小寫是有區別的 (Case Sensitive)
+2.空白鍵 換行鍵 在js中會被忽略(minification)
+3.單行註解 // , 多行註解 /* */
+4.變數名稱開頭要由文字 或_ 或$
+5.js有關鍵字 null of if then in finally for while break continue switch try ket const var 不能當作變數明成
+6.js使用unicode字元集合 string內部可以由任何unicode組成
+7.Semicolons (;) 可以用來分隔成是語句. Semicolons的使用是optional
