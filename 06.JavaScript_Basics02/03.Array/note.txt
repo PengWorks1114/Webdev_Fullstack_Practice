@@ -1,0 +1,13 @@
+Array不是Primitive data type.
+
+primitive data type :
+(copy by value)
+let deposit = 500;
+let another = deposit;
+another = 600;
+
+reference data type :
+(copy by reference)
+let friends = ["a", "b", "c"]
+let another = friends;
+another[0] = "d";
