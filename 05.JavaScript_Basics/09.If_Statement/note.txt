@@ -1,0 +1,20 @@
+JS中comparison operators的運算元是兩個任意資料型態,且運算結果為Boolean值.
+1.== //回傳true如果是等於
+2.!= //回傳true如果不等於
+3.=== //回傳true如果等於,且形態也等於
+4.!== //回傳true如果不等於,或形態也不等於 滿足一個就可以
+5.>
+6.<
+7.>=
+8.<=
+
+Logical Operators:
+且 &&
+或 ||
+
+A B A&&B A||B
+t t  t    t
+t f  f    t
+f t  f    t
+f f  f    f
+
