@@ -1,5 +1,3 @@
-$themecolor: rgb(54, 141, 212);
-
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +27,7 @@ body {
           text-decoration: none;
           transition: all 0.1s ease;
           &:hover {
-            color: $themecolor;
+            color: rgb(54, 141, 212);
           }
         }
       }
@@ -56,7 +54,7 @@ body {
         }
         a {
           color: white;
-          background-color: $themecolor;
+          background-color: rgb(54, 141, 212);
           padding: 0.25rem 0.5rem;
           font-size: 1.5rem;
           border-radius: 20px;
@@ -95,6 +93,30 @@ body {
             margin-top: 1rem;
           }
         }
+      }
+    }
+    section.resume {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      section.table {
+        flex: 5 1 500px;
+        border: 2px solid red;
+        padding: 2rem;
+        table {
+          border-collapse: collapse;
+          tr {
+            border-bottom: 2px solid gray;
+            transition: all 0.2s ease;
+            &:hover {
+              background-color: rgb(54, 141, 212);
+            }
+          }
+        }
+      }
+      section.picture {
+        flex: 1 1 500px;
+        border: 2px solid black;
       }
     }
   }
