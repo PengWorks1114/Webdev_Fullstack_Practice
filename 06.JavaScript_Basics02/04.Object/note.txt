@@ -1,0 +1,9 @@
+每個JS物件都有properties和method.屬於物件的finction被稱為method.
+物件的屬性與相對應的值是一種key-value pair.
+獲取物件屬性的方式可以透過dot notation或是[].//參照app.js
+
+在method中的this關鍵字指的是調用該方法的物件.
+若某個function沒有調用該function的物件,
+則this關鍵字則是指向window物件.
+
+在javaScript當中的function/array其實都是物件object.Array以及function都是special type of objects.
