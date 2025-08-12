@@ -1,0 +1,19 @@
+JS裡面有七種基本數據類型:
+1.Number:
+整數與帶小數點的數字.
+ex.10/-4/-3.14
+2.BigInt:
+任意長度的整數.
+3.String:
+字串符
+4.Boolean:
+true/false
+5.null:
+用來代表某個故意不存在的值.
+6.undefined:
+未被賦值的變數,就是undefined.
+7.symbol:
+unique identifier.
+
+除了這七種基本數據類型之外JS的第八種數據類型叫做object,
+屬於non-primitive data type.JS中的object可能是array,object或是function等等.
