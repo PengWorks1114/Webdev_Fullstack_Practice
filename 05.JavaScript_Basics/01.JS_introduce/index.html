@@ -6,5 +6,11 @@
     <title>網站名稱</title>
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
-  <body></body>
+  <body>
+    <script src="./app.js">
+      //如果不在上面src寫js 而是直接寫在這邊的話 那就只有這個頁面會套用js
+      //另外js寫在最後的原因 是因為我們在載入網頁的時候要先載如圖片和文字 最後再來處理js
+      //如果一開始就處理js 導致耗損載入時間造成網頁空白幾秒 使用者很快就會關閉網頁不想使用
+    </script>
+  </body>
 </html>
