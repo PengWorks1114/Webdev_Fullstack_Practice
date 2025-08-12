@@ -1,0 +1,8 @@
+For Loop:
+for (initialization; condition; final expression) {
+    statement
+}
+
+initialization是在循環開始之前的計數器變量聲明
+condition是每次循環迭代之前評估的表達式.如果此表達式的計算結果為真,則執行statement.
+如果condition的計算結果為假,則執行退出循環並轉到forloop之後的第一條語句.
