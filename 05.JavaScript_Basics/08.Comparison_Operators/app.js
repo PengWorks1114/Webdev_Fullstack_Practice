@@ -1,8 +1,5 @@
-console.log(!true); //反轉 = false
-console.log(typeof true); //boolean
+console.log(3 == "3"); //true
+console.log(3 === "3"); //false 因為一個是Number 一個是String
+console.log(3 !== "3"); //true 因為一個是Number 一個是String
 
-let x;
-console.log(x);
-
-let y = null;
-console.log(y);
+console.log(5 > 3 && 100 > 99); //true

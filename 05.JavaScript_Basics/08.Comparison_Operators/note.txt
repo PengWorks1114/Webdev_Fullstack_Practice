@@ -1,19 +1,20 @@
-JS裡面有七種基本數據類型:
-1.Number:
-整數與帶小數點的數字.
-ex.10/-4/-3.14
-2.BigInt:
-任意長度的整數.
-3.String:
-字串符
-4.Boolean:
-true/false
-5.null:
-用來代表某個故意不存在的值.
-6.undefined:
-未被賦值的變數,就是undefined.
-7.symbol:
-unique identifier.
+JS中comparison operators的運算元是兩個任意資料型態,且運算結果為Boolean值.
+1.== //回傳true如果是等於
+2.!= //回傳true如果不等於
+3.=== //回傳true如果等於,且形態也等於
+4.!== //回傳true如果不等於,或形態也不等於 滿足一個就可以
+5.>
+6.<
+7.>=
+8.<=
 
-除了這七種基本數據類型之外JS的第八種數據類型叫做object,
-屬於non-primitive data type.JS中的object可能是array,object或是function等等.
+Logical Operators:
+且 &&
+或 ||
+
+A B A&&B A||B
+t t  t    t
+t f  f    t
+f t  f    t
+f f  f    f
+
