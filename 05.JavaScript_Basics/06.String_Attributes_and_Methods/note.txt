@@ -1,19 +1,13 @@
-JS裡面有七種基本數據類型:
-1.Number:
-整數與帶小數點的數字.
-ex.10/-4/-3.14
-2.BigInt:
-任意長度的整數.
-3.String:
-字串符
-4.Boolean:
-true/false
-5.null:
-用來代表某個故意不存在的值.
-6.undefined:
-未被賦值的變數,就是undefined.
-7.symbol:
-unique identifier.
-
-除了這七種基本數據類型之外JS的第八種數據類型叫做object,
-屬於non-primitive data type.JS中的object可能是array,object或是function等等.
+JS中的String有可用的attributes和methods,常見的有:
+1.lengh - return String的長度.
+2.[n] - return index 第n項的字.
+3.slice(indexStart[,indexEnd]) - 提取字符串的一部分並將其作為新的String返回,不修改原始字符串.
+4.indexOf(substring) - return substring 的index位置. 若找不到substring,則return -1.
+5.toUpperCase() - 轉換成大寫.
+6.toLowerCase() - 轉換成小寫.
+7.split(pattern) - 接受一個pattern並通過搜索將一個字符串分成一個有序的array,
+然後return該array.Pattern可以是regular expression.
+8.startsWith(s) - 確定String是否已指定字串s開頭,根據需要返回true或是false.
+9.ednsWith(s) - 確認結尾,同上.
+10.includes(str) - return true如果String內部包含str.
+11.charCodeAt(n) - 返回一個介於0和65535之間的整數,表示給定索引處n的UTF-16 code unit.

@@ -1,5 +1,15 @@
-console.log(3 == "3"); //true
-console.log(3 === "3"); //false 因為一個是Number 一個是String
-console.log(3 !== "3"); //true 因為一個是Number 一個是String
+//買票練習題
 
-console.log(5 > 3 && 100 > 99); //true
+let age = prompt("請輸入你的年齡: ");
+
+age = Number(age); //將她轉換成Number
+
+console.log(age);
+
+if (age >= 0 && age <= 12) {
+  alert("您的兒童票一張100元");
+} else if (age > 12 && age <= 65) {
+  alert("您的成人票一張250元");
+} else if (age > 65 && age <= 125) {
+  alert("您的敬老票一張150元");
+}

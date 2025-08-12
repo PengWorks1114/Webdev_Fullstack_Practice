@@ -1,150 +1,134 @@
-## 📚 專案說明
+# 買票練習題 (Ticket Purchase Practice)
 
-JavaScript 中共有 **七種基本數據類型 (Primitive Data Types)**：我明白了，你是要我把 `note.txt` 中的 **`||`（邏輯 OR）** 部分完整寫入到 README，而不是像我剛剛那樣只是放在真值表中一帶而過。
-我會重新整理，把 `||` 的解釋與細節也完整加進去。
+## 專案簡介
 
----
-
-# Comparison Operators 專案說明
-
-本專案為 JavaScript 基礎練習之一，示範\*\*比較運算子（Comparison Operators）**與**邏輯運算子（Logical Operators）\*\*的使用方式，並在瀏覽器主控台輸出運算結果，幫助初學者理解不同運算子的差異與應用場景。
+此專案為一個簡單的 JavaScript 練習，透過使用者輸入年齡來判斷票種與票價，並彈出對應訊息。程式示範了 **條件判斷 (if / else if / else)** 的使用方式，適合作為 JavaScript 初學者的條件判斷練習。
 
 ---
 
-## 📂 專案結構
+## 功能說明
 
-| 檔案名稱     | 功能說明                                     |
-| ------------ | -------------------------------------------- |
-| `index.html` | 基本 HTML 結構，載入 `app.js` 執行範例程式碼 |
-| `app.js`     | 比較運算子與邏輯運算子範例程式碼             |
-| `note.txt`   | 學習筆記，整理比較與邏輯運算子的語法與真值表 |
+- **使用者輸入年齡**
+  透過 `prompt()` 彈出輸入框，讓使用者輸入年齡。
+- **年齡轉換為數字**
+  使用 `Number()` 將字串轉為數字，避免型別比對錯誤。
+- **條件判斷票價**
 
----
-
-## 📝 筆記整理
-
-### 1. 比較運算子（Comparison Operators）
-
-比較運算子的運算元可以是**任意資料型態**，最終運算結果為 **Boolean 值（true/false）**。
-
-| 運算子 | 說明                                              |
-| ------ | ------------------------------------------------- |
-| `==`   | 若兩者相等（會進行型態轉換）則回傳 `true`         |
-| `!=`   | 若兩者不相等（會進行型態轉換）則回傳 `true`       |
-| `===`  | 若兩者相等且**型態相同**則回傳 `true`             |
-| `!==`  | 若兩者不相等或型態不同，任一條件成立則回傳 `true` |
-| `>`    | 大於                                              |
-| `<`    | 小於                                              |
-| `>=`   | 大於等於                                          |
-| `<=`   | 小於等於                                          |
+  - 0–12 歲 → **兒童票 100 元**
+  - 13–65 歲 → **成人票 250 元**
+  - 66–125 歲 → **敬老票 150 元**
 
 ---
 
-### 2. 邏輯運算子（Logical Operators）
+## `note.txt` 條件判斷語法整理
 
-#### `&&`（AND，且）
-
-- 當左右兩側的條件都為 `true` 時，結果才會是 `true`
-- 若任一條件為 `false`，結果為 `false`
-- 常用於同時滿足多個條件的判斷
-
-#### `||`（OR，或）
-
-- 只要左右兩側的條件有**任一為 `true`**，結果就是 `true`
-- 只有當兩邊都是 `false`，結果才是 `false`
-- 常用於只需滿足其中一個條件即可的情境，例如登入驗證（帳號正確 **或** 信用代碼正確）
-
----
-
-#### 真值表（`&&` 與 `||`）
-
-| A   | B   | `A && B` | `A \|\| B` |
-| --- | --- | -------- | ---------- |
-| t   | t   | t        | t          |
-| t   | f   | f        | t          |
-| f   | t   | f        | t          |
-| f   | f   | f        | f          |
-
----
-
-## 💻 範例程式碼
-
-**`app.js` 範例：**
+根據 `note.txt`，專案使用了以下常見的 **if 條件結構**：
 
 ```javascript
-console.log(3 == "3"); // true，值相等（型態自動轉換）
-console.log(3 === "3"); // false，型態不同
-console.log(3 !== "3"); // true，型態不同
-console.log(5 > 3 && 100 > 99); // true，兩邊條件都成立
-console.log(5 > 3 || 100 < 50); // true，左邊條件成立即可
-console.log(1 === 2 || 2 === 3); // false，兩邊都不成立
+// 單一條件
+if (狀況) 執行1;
+
+// if / else 結構
+if (狀況) {
+  執行1;
+} else {
+  執行2;
+}
+
+// if / else if / else 多條件結構
+if (狀況1) {
+  執行1;
+} else if (狀況2) {
+  執行2;
+} else {
+  狀況n; // 上面條件都不符合時執行
+}
+```
+
+此專案採用第三種結構進行票種分類。
+
+---
+
+## 檔案結構
+
+```
+.
+├── index.html   # 頁面主結構，引用 app.js
+├── app.js       # 核心票價判斷邏輯
+├── note.txt     # 條件判斷語法筆記
+└── styles/
+    └── style.css # 預留樣式檔（此專案未使用）
 ```
 
 ---
 
-## 🚀 執行方式
+## 代碼解析
 
-1. 將 `index.html` 與 `app.js` 放在同一資料夾中
-2. 使用瀏覽器開啟 `index.html`
-3. 按下 **F12** 開啟開發者工具 → Console，即可查看輸出結果
+### 1. index.html【[檔案內容](index.html)】
+
+```html
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>網站名稱</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <script src="./app.js"></script>
+  </body>
+</html>
+```
+
+- 採用 HTML5 語法
+- `lang="zh-Hant"` 指定繁體中文
+- 引入 `app.js`，讓頁面載入時即執行 JavaScript
 
 ---
 
-如果你要的話，我可以把這份 **`Comparison_Operators` README** 跟你前面所有 JS 基礎章節的 README 一起整合成一份有**目錄索引**的完整 GitHub 教學文件，讓你點一下就能跳轉到對應章節。
-
-1. **Number**：整數與小數，例如 `10`、`-4`、`-3.14`
-2. **BigInt**：可表示任意長度整數
-3. **String**：字串，例如 `"Hello"`
-4. **Boolean**：布林值，只有 `true` 或 `false`
-5. **null**：代表「故意不存在」的值
-6. **undefined**：變數已宣告但尚未被賦值
-7. **Symbol**：唯一識別符（unique identifier）
-
-> 除此之外，JavaScript 的第八種資料型態為 **Object**（非原始型別），可為陣列、物件或函式等。
-
----
-
-## 🖥 範例程式碼
-
-**檔案：`app.js`**
+### 2. app.js【[檔案內容](app.js)】
 
 ```javascript
-console.log(!true); // 反轉布林值，結果為 false
-console.log(typeof true); // 顯示 boolean
+// 買票練習題
 
-let x;
-console.log(x); // undefined，尚未賦值
+let age = prompt("請輸入你的年齡: ");
 
-let y = null;
-console.log(y); // null，代表刻意設定為「空值」
+age = Number(age); // 將輸入轉為數字
+
+console.log(age);
+
+if (age >= 0 && age <= 12) {
+  alert("您的兒童票一張100元");
+} else if (age > 12 && age <= 65) {
+  alert("您的成人票一張250元");
+} else if (age > 65 && age <= 125) {
+  alert("您的敬老票一張150元");
+}
 ```
+
+- **prompt()** → 取得輸入
+- **Number()** → 型別轉換，避免 `"10" > 65` 這類錯誤
+- **if / else if** → 判斷票種與金額
+- **alert()** → 彈出對應票價
 
 ---
 
-## 💡 重點說明
+## 執行方式
 
-### 1. Boolean
+1. 將專案下載至本地端
 
-- 只有 `true` 與 `false`
-- 可用 `!` 反轉布林值
+   ```bash
+   git clone <repository_url>
+   ```
 
-### 2. undefined
-
-- 變數已宣告但尚未賦值的預設值
-- 系統自動賦予
-
-### 3. null
-
-- 由開發者手動指定的「空值」
-- 表示該變數目前沒有值，但預期之後會有
+2. 使用瀏覽器直接開啟 `index.html`
+3. 在彈出的輸入框中輸入年齡，查看票價提示。
 
 ---
 
-## 📂 專案結構
+## 學習重點
 
-```
-07.Boolean_Undefined_Null/
-│── index.html   # HTML 主檔案，引用 app.js
-│── app.js       # JavaScript 範例程式
-└── note.txt     # 筆記與理論說明
-```
+- **條件判斷結構的使用**
+- **型別轉換的重要性**
+- **基本的瀏覽器輸入與輸出**
