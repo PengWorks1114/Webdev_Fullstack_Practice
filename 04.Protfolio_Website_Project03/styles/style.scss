@@ -15,7 +15,7 @@ h6 {
 }
 
 body {
-  // 導覽列
+  overflow-x: hidden;
   nav {
     background-color: white;
     position: sticky; //固定navbar
@@ -195,6 +195,7 @@ body {
       }
 
       section.resume {
+        overflow-x: auto; //在視窗縮小的時候就會有一個水平移動軸F可以去顯示
         section.picture {
           div.blueRect,
           div.blueRect2,
