@@ -1,0 +1,4 @@
+JavaScript函數:
+console.log():將message輸出到web控制台
+window.alert():指示瀏覽器顯示帶有可選消息的對話框,並等待用戶關閉對話框
+window.prompt():指示瀏覽器顯示帶有可選消息的對話框,提示用戶輸入一些文字,並等待用戶提交文字或取消對話框
