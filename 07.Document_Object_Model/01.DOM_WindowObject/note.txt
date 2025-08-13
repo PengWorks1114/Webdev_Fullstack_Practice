@@ -1,0 +1,17 @@
+文件物件模型(Document Object Model, DOM)
+DOM允許我們在JS之中操作HTML元素.
+如果JS無法存取DOM,那麼他和其他程式語言就沒有差別.
+
+Window Object:
+window.alert() - 在視窗顯示對話框警示 // 基本上就是alert(),因為太常用了所以通常都直接省略只打alert
+window.addEventListener() - 將事件監聽程式附加到 Window Object。
+window.clearInterval() - 將 setInterval() 所重複執行的程式暫停。
+window.prompt() - 回傳使用者在提示對話框中輸入的文字。
+window.setInterval() - 每次經過指定毫秒數時安排執行一個函數。
+
+可使用常見的properties包含:
+window.console - 常用的methods為log(), error(). //其實就是console.log()
+window.document - return window包含的文檔(HTML Document OBJECT),也就是HTML文件. //這個很重要
+
+window.localStorage - return一個local storage物件.
+window.sessionStorage - return一個session storage物件.
