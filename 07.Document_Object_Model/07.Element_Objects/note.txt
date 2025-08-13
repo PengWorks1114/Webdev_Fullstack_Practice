@@ -1,0 +1,35 @@
+Element Objects:
+Element Objects 常用屬性與方法
+在 DOM Tree 中，每個 HTML 元素（Element Object）除了自身獨有的屬性與方法外，
+所有 Element Objects 都必須具備以下屬性與方法：
+
+事件與節點操作
+addEventListener(event, callbackFn)：註冊事件監聽器
+
+appendChild(element)：將節點加入為子元素
+
+children：僅包含子元素的 HTMLCollection
+
+childNodes：包含子節點（包括文字節點、註解等）的 NodeList
+
+parentElement：父元素
+
+CSS 與類別操作
+classList：操作元素的 class（提供 .add()、.remove()、.toggle()、.contains() 等方法）
+
+style：修改元素的 inline style（因 JS 不允許使用 -，CSS 屬性需改成 camelCase，如 backgroundColor）
+
+屬性與內容存取
+getAttribute(attributeName)：取得屬性值
+
+innerHTML：取得/設定 HTML 內容
+
+innerText：取得/設定文字內容
+
+選擇器
+querySelector(selector)：回傳第一個符合的元素
+
+querySelectorAll(selector)：回傳所有符合的元素（NodeList）
+
+節點移除
+remove()：刪除元素本身
