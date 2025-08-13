@@ -6,31 +6,31 @@
 
 ## 📁 章節一覽（點擊可直接前往）
 
-### 01️⃣ [Go Tutorial 初學者專案（靜態網站）](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/01.Go_Tutorial_Website_Project01)
+### 01️ [Go Tutorial 初學者專案（靜態網站）](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/01.Go_Tutorial_Website_Project01)
 - HTML/CSS 排版基礎
 - 頁面切換、標籤運用
 - 原生 JS 動態行為
 
-### 02️⃣ [Advanced HTML/CSS 技術整合](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/02.Advanced_HTML_CSS)
+### 02️ [Advanced HTML/CSS 技術整合](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/02.Advanced_HTML_CSS)
 - Media Query 響應式設計
 - Bootstrap 快速建構 UI
 - User Snippet 編輯器提升效率
 - FreeImage／Font 授權使用方式
 - Sass 預處理器實戰與模組化開發
 
-### 03️⃣ [日本旅遊網專案（Project02）](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/03.Japan_TravelSite_Project02)
+### 03️ [日本旅遊網專案（Project02）](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/03.Japan_TravelSite_Project02)
 - 多頁面靜態網站整合
 - 客製化 hover 效果（圓圈動畫）
 - 圖文結構設計與樣式優化
 
-### 04️⃣ [個人作品集網站（Portfolio Project03）](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/04.Protfolio_Website_Project03)
+### 04️ [個人作品集網站（Portfolio Project03）](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/04.Protfolio_Website_Project03)
 - 簡約個人作品集設計
 - 導覽列與多頁面結構
 - 響應式版面與版型優化
 
-### 05️⃣ [JavaScript 基礎練習](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/05.JavaScript_Basics)
+### 05️ [JavaScript 基礎練習](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/05.JavaScript_Basics)
 - 變數與資料型別
 
 
-### 06️⃣ [JavaScript 基礎練習（二）](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/06.JavaScript_Basics02)
+### 06️ [JavaScript 基礎練習（二）](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/06.JavaScript_Basics02)
 - 流程控制與迴圈
