@@ -1,0 +1,9 @@
+forEach()Method:
+他本身就是一個higher function
+所以我們在括號裡面要給他的要是arrow function
+語法:
+
+forEach(element => ...)
+forEach((element, index) => ...)
+若只放入一個callback function, 語法則是:
+forEach(callbackFn)
