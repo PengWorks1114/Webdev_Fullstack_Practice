@@ -1,4 +1,4 @@
-```markdown
+
 # DOM Element Objects 教學示例
 
 本專案示範了 JavaScript 操作 DOM（文件物件模型）中 **Element Objects** 的常用屬性與方法，包含事件監聽、節點操作、屬性存取與節點移除等。
