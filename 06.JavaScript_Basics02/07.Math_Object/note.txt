@@ -1,0 +1,10 @@
+常見Math Object:
+
+Math.PI;
+Math.E;
+Math.pow(x,y); //x的y次方
+Math.random(); //給定一個0~1之間的任意小數(不包含1)
+Math.sqrt(x); //開根號
+Math.abs(x); //絕對值
+Math.floor(x); //向下取地板值(無條件捨去)
+Math.ceil(x); //無條件進位
