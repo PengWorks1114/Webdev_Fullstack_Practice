@@ -1,4 +1,3 @@
-
 # 🧭 Webdev_Fullstack_Practice 總導覽
 
 此倉庫為個人全端開發練習專案，依主題與練習目標分成多個資料夾，涵蓋前端基礎、元件應用、實戰專案等內容，並透過 `README.md` 詳細說明每項技術與實作方式。
@@ -24,4 +23,14 @@
 - 客製化 hover 效果（圓圈動畫）
 - 圖文結構設計與樣式優化
 
----
+### 04️⃣ [個人作品集網站（Portfolio Project03）](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/04.Protfolio_Website_Project03)
+- 簡約個人作品集設計
+- 導覽列與多頁面結構
+- 響應式版面與版型優化
+
+### 05️⃣ [JavaScript 基礎練習](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/05.JavaScript_Basics)
+- 變數與資料型別
+
+
+### 06️⃣ [JavaScript 基礎練習（二）](https://github.com/PengWorks1114/Webdev_Fullstack_Practice/tree/master/06.JavaScript_Basics02)
+- 流程控制與迴圈
