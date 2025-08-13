@@ -1,0 +1,33 @@
+For Loop:
+for (initialization; condition; final expression) {
+    statement
+}
+
+initialization是在循環開始之前的計數器變量聲明
+condition是每次循環迭代之前評估的表達式.如果此表達式的計算結果為真,則執行statement.
+如果condition的計算結果為假,則執行退出循環並轉到forloop之後的第一條語句.
+
+*如果我們已經預先知道我們要做某件事情或運算幾次,就可以採用forloop來寫迴圈
+
+While Loop:
+while語句創建一個循環,只要測試條件評估為真,該循環就會執行指定的語句.
+在whileloop執行語句之前評估條件.若忘記增加計數器而導致whileloop無限循環,
+有可能會癱瘓電腦的cpu,要小心.
+
+While Loop語法為:
+
+while(condition) {
+    statement
+}
+
+Do while loop:
+Do while loop 會創建一個循環,該循環執行指定的statement,直到測試條件評估為假.
+do while loop的特點在於,先執行語句後評估條件.
+
+Do while Loop語法為:
+
+do {
+    statement
+} while (condition);
+
+跟while loop比 一個是先做再比較(do while loop);一個是先比較再做(while loop).
