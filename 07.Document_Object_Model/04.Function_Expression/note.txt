@@ -1,0 +1,11 @@
+在JS之中,定義fun的方式有兩種:
+Function Declaration and expression.
+
+Function expression的語法為:
+
+function (param0, param1, ..., paramN) {
+    statements
+}
+
+Function expression與 Function Declaration語法幾乎相同,
+主要區別在於名稱,可以在Function expression 中省略函數名稱以創建名函數.
