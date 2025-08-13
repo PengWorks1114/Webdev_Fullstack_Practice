@@ -1,0 +1,32 @@
+在DOM(Document Object Model)這顆樹上的每個點被稱為節點(node).
+節點分為三種:
+1.HTML元素節點(稱為element nodes or element objects)
+2.文字節點(text node)
+3.註解節點(comment node)
+
+DOM提供兩種節點集合: HTMLCollection以及NodeList.
+
+Document Object常用的methods有:
+window.document.addEventListener()
+window.document.createElement(tagName)
+
+window.document.getElementById(id) :
+return第一個id相符合的element object.
+
+window.document.getElementsByClassName(className) :
+return一個動態的HTMLCollection,
+內部元素包含所有具有給定className的元素.
+
+
+
+querySelector(selectors) :
+return 第一個符合特定選擇棄群組的element object.採用深度優先搜尋演算法.
+
+querySelectorAll(selectors) :
+return 一個靜態 (not live) NodeList, 表示與指定選擇器組匹配的元素列表.
+
+HTMLCollection, NodeList are not Array.
+=> array-like object
+
+HTMLCollection 動態 dynamic
+NodeList 靜態 static
