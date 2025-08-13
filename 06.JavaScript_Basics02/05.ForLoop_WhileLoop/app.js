@@ -17,3 +17,10 @@ while (i < 10) {
   console.log(i);
   i++; //這一步最重要,少了這裡他還是永遠會是0,就會變成無限迴圈
 }
+
+let k = 0;
+
+do {
+  console.log(k);
+  k++;
+} while (k < 10);

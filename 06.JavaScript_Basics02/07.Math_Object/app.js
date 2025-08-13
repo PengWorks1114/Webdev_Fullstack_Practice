@@ -1,19 +1,8 @@
-for (let i = 0; i < 11; i++) {
-  console.log(i);
-}
+console.log(Math.PI); //3.14....
+console.log(Math.E); //2.71....
 
-console.log("forloop執行完畢");
-
-// while ("true") {
-//   console.log("這個程式碼正在被執行...")
-// };
-//無限迴圈
-
-// 正確用法
-// 宣告一個計數器
-let i = 0;
-
-while (i < 10) {
-  console.log(i);
-  i++; //這一步最重要,少了這裡他還是永遠會是0,就會變成無限迴圈
-}
+console.log(Math.pow(3, 2)); //9;3的2次方
+console.log(Math.sqrt(2)); //1.414;根號2
+console.log(Math.abs(-2)); //2
+console.log(Math.floor(9.99999)); //9
+console.log(Math.ceil(9.00001)); //10
