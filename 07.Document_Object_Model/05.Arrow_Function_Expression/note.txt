@@ -1,0 +1,59 @@
+Arrow Function Expression:
+() => expression
+param => expression
+(param1, param2, ...) => expression
+param => {return expression}
+
+
+
+---
+
+## Arrow Function Expression 規則整理
+
+1. **只有一個參數**
+
+   * 括號可加可不加。
+   * 例：
+
+     ```js
+     x => x * 2
+     (x) => x * 2
+     ```
+
+2. **零個或兩個以上參數**
+
+   * 一定要加括號。
+   * 例：
+
+     ```js
+     () => 42
+     (x, y) => x + y
+     ```
+
+3. **主體無大括號**
+
+   * 會自動回傳該表達式的值（implicit return）。
+   * 例：
+
+     ```js
+     x => x + 1
+     ```
+
+4. **主體有多個計算式**
+
+   * 一定要加大括號 `{}`。
+
+5. **主體加上大括號**
+
+   * 必須使用 `return` 關鍵字才會回傳值。
+   * 例：
+
+     ```js
+     (x, y) => { return x + y; }
+     ```
+
+6. **沒有自己的 `this` 綁定**
+
+   * 不適合作為物件的方法（methods）使用。
+
+---

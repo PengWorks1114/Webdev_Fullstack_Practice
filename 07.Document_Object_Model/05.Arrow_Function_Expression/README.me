@@ -1,0 +1,120 @@
+
+
+# ⚡ JavaScript — Arrow Function Expression
+
+## 📌 專案簡介
+
+此專案示範了：
+
+* **箭頭函式（Arrow Function Expression）** 的語法與規則
+* 以箭頭函式撰寫一般函式
+* 在物件中使用箭頭函式作為方法（以及其限制）
+
+---
+
+## 📚 筆記整理（來自 `note.txt`）
+
+### 1️⃣ 基本語法
+
+```javascript
+() => expression
+param => expression
+(param1, param2, ...) => expression
+param => { return expression }
+```
+
+### 2️⃣ 使用規則
+
+1. **一個參數**：括號可省略
+
+   ```javascript
+   x => x * 2
+   (x) => x * 2
+   ```
+2. **零個或兩個以上參數**：必須加括號
+
+   ```javascript
+   () => 42
+   (x, y) => x + y
+   ```
+3. **單一表達式且無大括號**：自動回傳（implicit return）
+
+   ```javascript
+   x => x + 1
+   ```
+4. **多個計算式**：必須加大括號 `{}`
+5. **加上大括號**：需要 `return` 才能回傳值
+
+   ```javascript
+   (x, y) => { return x + y; }
+   ```
+6. **沒有自己的 `this` 綁定**：不適合用於物件方法（methods）
+
+---
+
+## 📂 專案檔案結構
+
+```
+.
+├── index.html   # 主頁面
+├── app.js       # 範例程式碼
+└── note.txt     # 筆記，整理箭頭函式語法與規則
+```
+
+---
+
+## 💻 程式碼解析
+
+### 1️⃣ 一般箭頭函式
+
+```javascript
+let hello = () => {
+  console.log("hw");
+};
+hello();
+```
+
+* 無參數 → 需加括號 `()`
+* 多行主體 → 必須加大括號 `{}`
+
+---
+
+### 2️⃣ 物件中的箭頭函式
+
+```javascript
+let Wilson = {
+  name: "Willson",
+  walk: () => {
+    console.log("Wilson is walking..");
+  },
+};
+Wilson.walk();
+```
+
+* 箭頭函式沒有自己的 `this` 綁定
+* 在物件方法中使用時，`this` 不會指向該物件（不適合作為 method）
+
+---
+
+## 🚀 執行方式
+
+1. 下載或 clone 專案：
+
+   ```bash
+   git clone <repository_url>
+   ```
+2. 開啟 `index.html`
+3. 在瀏覽器開發者工具（F12 → Console）觀察輸出結果
+
+---
+
+## 🎯 學習重點
+
+* 箭頭函式語法簡潔、適合短函式與 callback function
+* 沒有自己的 `this` 綁定 → 不建議用於物件方法
+* 使用情境：
+
+  * 陣列迭代處理（`map`、`forEach`）
+  * 簡短邏輯的函式
+  * 不依賴 `this` 的情況
+
