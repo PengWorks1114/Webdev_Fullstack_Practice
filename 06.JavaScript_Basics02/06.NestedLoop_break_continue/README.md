@@ -1,63 +1,32 @@
-# 🔄 JavaScript — For Loop 與 While Loop 基礎練習
+# 🔁 JavaScript — 巢狀迴圈（Nested Loop）、Break 與 Continue
 
 ## 📌 專案簡介
 
-此專案示範了 **JavaScript 迴圈（Loop）** 的兩種常用形式：
+此專案示範了：
 
-1. `for` 迴圈 — 適合已知執行次數的情境
-2. `while` 迴圈 — 適合需持續檢查條件的情境
-
-並說明了 **無限迴圈** 的風險與避免方法。
+- **巢狀迴圈（Nested Loop）** 的運作方式
+- **`break`** 與 **`continue`** 在迴圈中的應用
+- 透過 `for` 迴圈搭配陣列輸出內容
 
 ---
 
 ## 📚 筆記整理（來自 `note.txt`）
 
-### 1️⃣ For Loop
+### 1️⃣ 巢狀迴圈（Nested Loop）
 
-- 語法：
+- 定義：一個迴圈中再包含另一個迴圈
+- 特點：**外圈每執行一次，內圈會完整執行一次**
 
-```javascript
-for (initialization; condition; final expression) {
-    statement
-}
-```
+### 2️⃣ `break` 關鍵字
 
-- **initialization**：迴圈開始前的變數宣告與初始值
-- **condition**：每次迭代前評估的條件，為假則結束迴圈
-- **final expression**：每次迴圈結束後執行的表達式（通常用來更新計數器）
-- 適用情境：已知需要執行的次數
+- 用途：終止所在的迴圈
+- 在巢狀迴圈中，`break` 只會終止包含它的那層迴圈
+- 若要完全跳出所有迴圈，可使用 `return` 或額外邏輯控制
 
----
+### 3️⃣ `continue` 關鍵字
 
-### 2️⃣ While Loop
-
-- 語法：
-
-```javascript
-while (condition) {
-  statement;
-}
-```
-
-- 條件為真時重複執行，條件為假時停止
-- 常見陷阱：忘記更新計數器 → 造成 **無限迴圈**
-- 適用情境：不確定迴圈執行次數，需要根據條件決定
-
----
-
-### 3️⃣ Do While Loop
-
-- 語法：
-
-```javascript
-do {
-  statement;
-} while (condition);
-```
-
-- 特點：**先執行一次**再檢查條件
-- 與 `while` 差異：`while` 是先檢查再執行
+- 用途：跳過當前迭代剩餘程式碼，直接進入下一次迭代
+- 與 `break` 相反，不會終止迴圈
 
 ---
 
@@ -65,41 +34,60 @@ do {
 
 ```
 .
-├── index.html   # 主頁面，引用 app.js
-├── app.js       # 迴圈示範程式碼
-└── note.txt     # 筆記，整理三種迴圈差異與語法
+├── index.html   # 主頁面，引用 app.js（可改引 app2.js 測試其他功能）
+├── app.js       # 基本 for 與 while 迴圈範例
+├── app2.js      # 巢狀迴圈、break、continue、陣列輸出範例
+└── note.txt     # 筆記，整理語法與使用情境
 ```
 
 ---
 
 ## 💻 程式碼解析
 
-### 1️⃣ for 迴圈範例
+### 1️⃣ 巢狀迴圈與 `break`
 
 ```javascript
-for (let i = 0; i < 11; i++) {
-  console.log(i);
+for (let i = 0; i < 100; i++) {
+  for (let j = 0; j < 100; j++) {
+    console.log(j);
+    if (j == 3) {
+      break; // 只會跳出內層迴圈
+    }
+  }
 }
-console.log("forloop執行完畢");
 ```
 
-- 從 0 執行到 10，共輸出 11 次
-- `i++` 每次增加 1
+- 內層 `j` 從 0\~3 後就被 `break` 終止
+- 外層 `i` 依然會繼續到 100 次
 
 ---
 
-### 2️⃣ while 迴圈範例
+### 2️⃣ `continue` 範例
 
 ```javascript
-let i = 0;
-while (i < 10) {
-  console.log(i);
-  i++; // 防止無限迴圈
+for (let k = 0; k < 10; k++) {
+  if (k == 3) {
+    continue; // 跳過 3
+  }
+  console.log(k);
 }
 ```
 
-- 當 `i < 10` 時持續執行
-- 更新計數器 `i++` 是關鍵步驟
+- 當 `k` 為 3 時，直接進入下一次迴圈，跳過 `console.log()`
+
+---
+
+### 3️⃣ 陣列輸出
+
+```javascript
+let arr = ["Mike", "Grace", "Jason", "Jared"];
+for (let p = 0; p < arr.length; p++) {
+  console.log(arr[p] + " is my friend.");
+}
+```
+
+- 使用 `arr.length` 控制迴圈範圍
+- 動態遍歷陣列元素
 
 ---
 
@@ -113,12 +101,12 @@ while (i < 10) {
 
 2. 使用瀏覽器開啟 `index.html`
 3. 開啟開發者工具（F12 → Console）觀察輸出結果
+4. 可切換 `<script src="./app.js"></script>` 為 `app2.js` 測試不同範例
 
 ---
 
 ## 🎯 學習重點
 
-- `for` 適合已知次數的迴圈
-- `while` 適合不確定次數、根據條件執行的迴圈
-- 小心無限迴圈對 CPU 的影響
-- `do while` 與 `while` 的主要差異在於檢查條件的時機
+- **巢狀迴圈** 的完整執行流程
+- **`break`** 與 **`continue`** 的使用差異
+- 陣列遍歷與 `arr.length` 的應用
