@@ -76,7 +76,7 @@ body {
           }
 
           input.class-credit {
-            width: 15%;
+            width: 10%;
           }
 
           button {
@@ -108,9 +108,31 @@ body {
         width: 200px;
         height: 200px;
         border: 3px solid red;
-        border: 50%;
+        border-radius: 50%;
         text-align: center;
+        animation-name: border_color;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        p {
+          margin-top: 15px;
+        }
+        h2#result-gpa {
+          font-size: 3.5rem;
+          font-weight: bold;
+        }
       }
     }
+  }
+}
+
+@keyframes border_color {
+  0% {
+    border-color: red;
+  }
+  33% {
+    border-color: limegreen;
+  }
+  66% {
+    border-color: yellow;
   }
 }
