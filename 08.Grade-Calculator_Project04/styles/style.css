@@ -26,4 +26,27 @@ body {
   background-color: black;
   color: white;
   font-family: "Libertinus Sans", cursive;
+}
+body header {
+  box-shadow: 0 8px 6px -6px black;
+}
+body header ul {
+  display: flex;
+}
+body header ul li {
+  padding: 1rem;
+}
+body header ul li a {
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+}
+body header ul li a:hover {
+  color: yellow;
+}
+body main section.main-part {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
