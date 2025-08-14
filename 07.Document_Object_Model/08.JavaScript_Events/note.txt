@@ -1,0 +1,21 @@
+JavaScript Events:
+Event表示了一個在DOM物件上所發勝的事件.
+一個是見通常發生是由使用者的操作行為所產生.
+
+addEventListener()可以讓我們在window object, document object以及 element object上面
+掛一個事件監聽器.直到特定事件發生時,事件監聽器就會執行被賦予的function.
+
+addEventListener(type, listener):
+type是指事件的類型.例如button可以掛click,window object可以掛resize這種事件監聽器.
+
+listener通常為一個一般function,或更常見的是一個arrow function expression.
+當事件發生在HTML element上面時,JavaScript會自動執行這個callback function.
+callback function被執行時, JS會在把event object當作 argument, 放進listener內部去執行函式.
+
+在所有的Event Objects中 , 最常用到的幾個屬性與方法是:
+target :
+指向最初觸發事件的DOM物件.
+preventDefault() :
+如果事件可以被處取消,就取消事件. 但不會影響事件的傳遞,事件仍會繼續傳遞.
+stopPropagation() :
+可以防止再event bubbling進一步傳播當前事件.
