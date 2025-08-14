@@ -62,6 +62,9 @@ body {
       }
 
       div.all-inputs {
+        width: 80%; // 讓區塊寬一點（依需求調整）
+        padding: 1rem; // 讓內部輸入框與邊界保持距離
+        margin: 1rem auto;
         form {
           input,
           select {
@@ -71,7 +74,42 @@ body {
             margin: 0.35rem;
             border-radius: 0.25rem;
           }
+
+          input.class-credit {
+            width: 15%;
+          }
+
+          button {
+            border: none;
+            cursor: pointer;
+            background-color: black;
+            i {
+              font-size: 1.25rem;
+              pointer-events: none;
+              color: white;
+            }
+          }
         }
+      }
+
+      button.plus-btn {
+        background-color: #272727;
+        border: none;
+        width: 2.5rem;
+        margin: 3rem 0rem;
+        cursor: pointer;
+        i {
+          font-size: 2.5rem;
+          color: white;
+        }
+      }
+
+      div.result {
+        width: 200px;
+        height: 200px;
+        border: 3px solid red;
+        border: 50%;
+        text-align: center;
       }
     }
   }
