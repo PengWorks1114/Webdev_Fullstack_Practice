@@ -49,4 +49,18 @@ body main section.main-part {
   flex-direction: column;
   text-align: center;
   align-items: center;
+}
+body main section.main-part h1 {
+  font-size: 1rem;
+}
+body main section.main-part p {
+  font-size: 1.15rem;
+}
+body main section.main-part div.all-inputs form input,
+body main section.main-part div.all-inputs form select {
+  font-size: 1.05;
+  padding: 0.5rem;
+  border: 0.25px solid rgb(39, 39, 21);
+  margin: 0.35rem;
+  border-radius: 0.25rem;
 }/*# sourceMappingURL=style.css.map */

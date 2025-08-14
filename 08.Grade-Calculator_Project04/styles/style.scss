@@ -60,6 +60,19 @@ body {
       p {
         font-size: 1.15rem;
       }
+
+      div.all-inputs {
+        form {
+          input,
+          select {
+            font-size: 1.05rem;
+            padding: 0.5rem;
+            border: 0.25px solid rgb(39, 39, 21);
+            margin: 0.35rem;
+            border-radius: 0.25rem;
+          }
+        }
+      }
     }
   }
 }
