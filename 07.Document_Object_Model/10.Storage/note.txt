@@ -1,0 +1,12 @@
+Event Bubbling:
+當一個事件發生在一個元素上時,他首先在其上面運行event handler,
+然後運行其parent element的event handler,
+接著一路往上運行其他祖先的event handler.
+
+假設這三個都有加上clickevent,當我點下button時:
+
+↑<section>
+↑<div>
+↑<button>
+
+Event Bubbling
