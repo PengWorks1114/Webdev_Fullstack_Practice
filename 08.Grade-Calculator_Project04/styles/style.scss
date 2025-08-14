@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn {
+  padding: 0.5rem 0.75rem; // 內邊距，上下 0.5rem、左右 0.75rem
+  border: none; // 移除按鈕邊框
+  margin: 1rem 0.5rem; // 外邊距，上下 1rem、左右 0.5rem
+  &:hover {
+    cursor: pointer; // 游標變成「可點擊手形」
+  }
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Libertinus Sans", cursive; //字體
+}
