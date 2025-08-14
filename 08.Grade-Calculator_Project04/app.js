@@ -52,6 +52,7 @@ allButtons.forEach((button) => {
 let allSelects = document.querySelectorAll("select");
 allSelects.forEach((select) => {
   select.addEventListener("change", (e) => {
+    setGPA(); //在成績發生變化的時候要去設置監聽
     changeColor(e.target); //e.target就是<select>
   });
 });
@@ -88,3 +89,5 @@ function changeColor(target) {
     target.style.backgroundColor = "white";
   }
 }
+
+function setGPA() {}
