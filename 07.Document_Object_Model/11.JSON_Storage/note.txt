@@ -1,0 +1,29 @@
+Local Storage and Session Storage:
+這兩個我們在window object下面的2個properties.本身自己也是object.
+
+Storage是在瀏覽器中一個儲存數據的地方(這個地方並不是db).
+在storage內部儲存的數值都是key-value pair,且不論是key還是value,
+資料型態都必須是String.
+如果我們將要儲存在Storage的資料不是String,
+那資料會先被強制轉換成String,接著再被存到Storage內部.
+
+sessionStorage 跟 localStorage 很相似 :
+唯一不同的地方是在存放在localStorage的資料並沒有過期的時效.
+即使把瀏覽器關了,電腦也關機,localStorage的資料仍然會被存放在瀏覽器內.
+另一方面,一旦用戶關閉瀏覽器,sessionStorage就會被銷毀.
+
+兩者所使用的method是一樣的:
+
+setIem(key, value) :
+當傳遞一個key和value時,會將該key-value pair添加到給定 Storage,
+或者如果該key的值已經存在於, 則更新該key的value.
+
+getItem(key) :
+從給定的Storage 中返回該key的value值.如果該key不存在,
+則返回null.
+
+removeItem(key) :
+給定的Storage中刪除該key-value pair(如果key-value pair存在的話)
+
+clear() :
+清除存儲在給定Storage中的所有key-value pair.
