@@ -1,29 +1,18 @@
 Local Storage and Session Storage:
-這兩個我們在window object下面的2個properties.本身自己也是object.
+由於Storage只能儲存String.我們若想要把object,array等等資料類型存放在Storage內部的話,
+需要用到JSON Object. JSON 代表 JavaScript Object Notation, 是一種資料交換格式.
 
-Storage是在瀏覽器中一個儲存數據的地方(這個地方並不是db).
-在storage內部儲存的數值都是key-value pair,且不論是key還是value,
-資料型態都必須是String.
-如果我們將要儲存在Storage的資料不是String,
-那資料會先被強制轉換成String,接著再被存到Storage內部.
+JSON Object 有兩個method :
 
-sessionStorage 跟 localStorage 很相似 :
-唯一不同的地方是在存放在localStorage的資料並沒有過期的時效.
-即使把瀏覽器關了,電腦也關機,localStorage的資料仍然會被存放在瀏覽器內.
-另一方面,一旦用戶關閉瀏覽器,sessionStorage就會被銷毀.
+JSON.stringify(value) :
+將value轉換為 JSON String.
 
-兩者所使用的method是一樣的:
+JSON.parse(text) :
+解析 JSON String, 製作出JSON String描述的JavaScript值或Object.
 
-setIem(key, value) :
-當傳遞一個key和value時,會將該key-value pair添加到給定 Storage,
-或者如果該key的值已經存在於, 則更新該key的value.
+[1, 2, 3]　→ setItem() → local storage "[1, 2, 3]" → "[1, 2, 3]"
+因為變成String所以無法使用forEach, push, pop等等meythod
 
-getItem(key) :
-從給定的Storage 中返回該key的value值.如果該key不存在,
-則返回null.
-
-removeItem(key) :
-給定的Storage中刪除該key-value pair(如果key-value pair存在的話)
-
-clear() :
-清除存儲在給定Storage中的所有key-value pair.
+[1, 2, 3] → JSON.stringify() → JSON String → setItem() → locak storage "JSON String"
+→ getItem() → JSON String → JSON.parse () 解析 → [1, 2, 3]
+又變回[] array 可以用forEach等等...
