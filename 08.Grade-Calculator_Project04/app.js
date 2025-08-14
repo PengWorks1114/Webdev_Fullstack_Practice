@@ -25,3 +25,7 @@ time_line
     "-=1.2"
   )
   .fromTo(animation, 0.3, { opacity: 1 }, { opacity: 0 }); //從1到0代表整個畫面消失在眼前顯示我們的網站
+
+window.setTimeout(() => {
+  animation.style.pointerEvents = "none";
+}, 2500); //1 + 1.2 + 0.3 秒 總花費動畫時間長度
