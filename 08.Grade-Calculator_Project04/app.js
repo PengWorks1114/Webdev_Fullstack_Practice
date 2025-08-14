@@ -29,3 +29,62 @@ time_line
 window.setTimeout(() => {
   animation.style.pointerEvents = "none";
 }, 2500); //1 + 1.2 + 0.3 秒 總花費動畫時間長度
+//這樣就可以把整個動畫遮罩隱藏起來
+
+//我們想要禁止使用者用Enter鍵 這樣可以預防他們誤觸發送資料給後台
+window.addEventListener("keypress", (e) => {
+  if (e.key == "Enter") {
+    e.preventDefault();
+  }
+});
+
+//垃圾桶icon的button我們也想要防止使用者發送(防止form內部的button交出表單)
+let allButtons = document.querySelectorAll("button");
+allButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
+});
+
+//想要讓最後一個選擇成績的地方 可以對應選擇的成績改變顏色
+//(選擇select內的option之後,要改變相對應的顏色)
+
+let allSelects = document.querySelectorAll("select");
+allSelects.forEach((select) => {
+  select.addEventListener("change", (e) => {
+    changeColor(e.target); //e.target就是<select>
+  });
+});
+
+function changeColor(target) {
+  if (target.value == "A" || target.value == "A-") {
+    target.style.backgroundColor = "green";
+    target.style.color = "black";
+  } else if (
+    target.value == "B" ||
+    target.value == "B-" ||
+    target.value == "B+"
+  ) {
+    target.style.backgroundColor = "yellow";
+    target.style.color = "black";
+  } else if (
+    target.value == "C" ||
+    target.value == "C-" ||
+    target.value == "C+"
+  ) {
+    target.style.backgroundColor = "orange";
+    target.style.color = "black";
+  } else if (
+    target.value == "D" ||
+    target.value == "D-" ||
+    target.value == "D+"
+  ) {
+    target.style.backgroundColor = "red";
+    target.style.color = "black";
+  } else if (target.value == "F") {
+    target.style.backgroundColor = "gray";
+    target.style.color = "white";
+  } else {
+    target.style.backgroundColor = "white";
+  }
+}
