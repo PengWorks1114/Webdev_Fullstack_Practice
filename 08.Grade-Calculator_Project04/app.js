@@ -90,6 +90,38 @@ function changeColor(target) {
   }
 }
 
+//各項成績對應數值;
+function convertor(grade) {
+  switch (grade) {
+    case "A":
+      return 4.0;
+    case "A-":
+      return 3.7;
+    case "B+":
+      return 3.4;
+    case "B":
+      return 3.0;
+    case "B-":
+      return 2.7;
+    case "C+":
+      return 2.4;
+    case "C":
+      return 2.0;
+    case "C-":
+      return 1.7;
+    case "D+":
+      return 1.4;
+    case "D":
+      return 1.0;
+    case "D-":
+      return 0.7;
+    case "F":
+      return 0.0;
+    default:
+      return 0;
+  }
+}
+
 function setGPA() {
   let formLength = document.querySelectorAll("form").length; //每一個橫排都是一個formLength
   let credits = document.querySelectorAll(".class-credit"); //學分數
@@ -99,6 +131,24 @@ function setGPA() {
   let creditSum = 0; // GPA計算用分母
 
   for (let i = 0; i < credits.length; i++) {
-    creditSum += credits[i].valuesAsNumber; //從f12找來的對應select成績屬性
+    if (!isNaN(credits[i].valueAsNumber)) {
+      //檢查是不是nan = 沒有值 js check nan 確認他是不是沒有值(沒有選)
+      creditSum += credits[i].valueAsNumber; //從f12找來的對應select成績屬性
+    }
   }
+
+  //從convertor找出對應成績分數 再從form裡面找
+
+  for (let i = 0; i < formLength; i++) {
+    // i < formLength 只要有成績就要拿出來計算
+    if (!isNaN(credits[i].valueAsNumber)) {
+      sum += credits[i].valueAsNumber * convertor(selects[i].value); //要讓他們成績相乘 credits[i]等於第n項
+    }
+  }
+
+  console.log("sum:" + sum);
+  console.log("creditSum:" + creditSum);
+
+  let result = sum / creditSum; //gpa的計算結果
+  document.getElementById("result-gpa").innerText = result;
 }
