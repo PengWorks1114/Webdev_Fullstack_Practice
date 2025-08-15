@@ -289,3 +289,5 @@ addButton.addEventListener("click", () => {
   //接下來我想新增動畫 當我按下加號新增物件的時候 我希望能有動畫
   newForm.style.animation = "scaleUp 0.5s ease forwards";
 });
+
+let allTrash = document.querySelectorAll(".trash-button");
