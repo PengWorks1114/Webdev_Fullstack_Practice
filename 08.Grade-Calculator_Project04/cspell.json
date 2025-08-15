@@ -14,21 +14,22 @@
     "FORS",
     "FREN",
     "HAWN",
-    "HWST",
     "HLTH",
+    "HWST",
+    "Itag",
     "MUSC",
     "OCEN",
     "PAIS",
+    "Peacebuilding",
     "PHSC",
+    "PMGT",
     "POSC",
     "PSYC",
-    "PMGT",
     "SAMN",
     "SCED",
     "SOCW",
     "STDEV",
-    "WLNG",
-    "Peacebuilding"
+    "WLNG"
   ],
   "ignorePaths": ["**/dist/**", "**/build/**", "**/node_modules/**"]
 }
