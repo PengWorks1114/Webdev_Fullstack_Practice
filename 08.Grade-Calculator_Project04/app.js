@@ -277,7 +277,7 @@ addButton.addEventListener("click", () => {
   newItag.classList.add("fa-trash");
   newButton.appendChild(newItag);
 
-  //   //以下
+  //   //以下不知道哪裡有問題 我全部註解掉 重新寫一次
   //   //防止按下trash-button後頁面重整怪怪的
   //   newButton.addEventListener("click", (e) => {
   //     //設置點擊監聽事件
@@ -293,7 +293,11 @@ addButton.addEventListener("click", () => {
   //       }
   //     );
   //   });
-  //   //以上
+  //   //以上不知道哪裡有問題 我全部註解掉 重新寫一次
+
+  newButton.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
 
   newDiv.appendChild(newInput1);
   newDiv.appendChild(newInput2);
