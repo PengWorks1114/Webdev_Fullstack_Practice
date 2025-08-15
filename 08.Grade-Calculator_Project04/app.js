@@ -334,6 +334,14 @@ let allTrash = document.querySelectorAll(".trash-button");
 allTrash.forEach((trash) => {
   trash.addEventListener("click", (e) => {
     e.target.parentElement.parentElement.classList.add("remove");
-    e.target.parentElement.parentElement.remove(); //因為js執行太快了,所以她不會裡我css裡面寫幾秒動畫 他會瞬間執行
+    // e.target.parentElement.parentElement.remove(); //因為js執行太快了,所以她不會裡我css裡面寫幾秒動畫 他會瞬間執行
+  });
+});
+
+allTrash.forEach((trash) => {
+  let form = trash.parentElement.parentElement;
+  form.addEventListener("transitionend", (e) => {
+    e.target.remove();
+    setGPA();
   });
 });
