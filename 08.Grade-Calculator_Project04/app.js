@@ -90,4 +90,15 @@ function changeColor(target) {
   }
 }
 
-function setGPA() {}
+function setGPA() {
+  let formLength = document.querySelectorAll("form").length; //每一個橫排都是一個formLength
+  let credits = document.querySelectorAll(".class-credit"); //學分數
+  let selects = document.querySelectorAll(".select"); //成績
+  //接著來計算gpa
+  let sum = 0; // GPA計算用分子
+  let creditSum = 0; // GPA計算用分母
+
+  for (let i = 0; i < credits.length; i++) {
+    creditSum += credits[i].valuesAsNumber; //從f12找來的對應select成績屬性
+  }
+}
