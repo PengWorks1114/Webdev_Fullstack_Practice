@@ -277,6 +277,24 @@ addButton.addEventListener("click", () => {
   newItag.classList.add("fa-trash");
   newButton.appendChild(newItag);
 
+  //   //以下
+  //   //防止按下trash-button後頁面重整怪怪的
+  //   newButton.addEventListener("click", (e) => {
+  //     //設置點擊監聽事件
+  //     e.preventDefault(); // 避免交出整個表單
+  //     e.target.parentElement.parentElement.style.animation =
+  //       "scaleDown 0.5s ease forwards";
+  //     // 下面新增一個"animationend"監聽事件 為了在動畫結束後執行動作
+  //     e.target.parentElement.parentElement.addEventListener(
+  //       "animationend",
+  //       (e) => {
+  //         e.target.remove(); // 這個form
+  //         setGPA();
+  //       }
+  //     );
+  //   });
+  //   //以上
+
   newDiv.appendChild(newInput1);
   newDiv.appendChild(newInput2);
   newDiv.appendChild(newInput3);
@@ -290,4 +308,32 @@ addButton.addEventListener("click", () => {
   newForm.style.animation = "scaleUp 0.5s ease forwards";
 });
 
+// //以下不知道哪裡有問題 我全部註解掉 重新寫一次
+// let allTrash = document.querySelectorAll(".trash-button"); // 找到所有 class 為 trash-button 的元素，回傳 NodeList
+// allTrash.forEach((trash) => {
+//   // forEach 逐一處理 NodeList 中的每個元素，變數名稱 trash 是你自己命名的
+//   trash.addEventListener("click", (e) => {
+//     // 對每個 trash-button 元素加上點擊事件監聽器
+//     e.target.parentElement.parentElement.classList.add("remove"); // 加入remove動畫,但實際還佔用class位置
+//     // e.target.parentElement.parentElement.remove();
+//     // e.target = 觸發事件的實際 DOM 元素
+//     // .parentElement.parentElement = 往上找兩層 DOM 節點
+//     // .remove() = 從 DOM 中移除該節點（刪除該元素與它的子元素）
+//   });
+// });
+// allTrash.forEach((trash) => {
+//   let form = trash.parentElement.parentElement;
+//   form.addEventListener("transitionend", (e) => {
+//     e.target.remove();
+//     setGPA(); // 記得刪除後也要setGPA() 下面才會同步運作
+//   });
+// });
+// //以上不知道哪裡有問題 我全部註解掉 重新寫一次
+
 let allTrash = document.querySelectorAll(".trash-button");
+allTrash.forEach((trash) => {
+  trash.addEventListener("click", (e) => {
+    e.target.parentElement.parentElement.classList.add("remove");
+    e.target.parentElement.parentElement.remove(); //因為js執行太快了,所以她不會裡我css裡面寫幾秒動畫 他會瞬間執行
+  });
+});
