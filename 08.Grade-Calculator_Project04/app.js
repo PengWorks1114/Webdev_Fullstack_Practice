@@ -149,6 +149,12 @@ function setGPA() {
   console.log("sum:" + sum);
   console.log("creditSum:" + creditSum);
 
-  let result = sum / creditSum; //gpa的計算結果
+  //gpa的計算結果
+  let result;
+  if (creditSum == 0) {
+    result = 0.0; //這裡要先去看計算出來的分母是不是0,如果是的話要直接跳到結果讓他等於0.0,不然會出現NaN,因為分母不能放0做計算
+  } else {
+    result = sum / creditSum;
+  }
   document.getElementById("result-gpa").innerText = result;
 }
