@@ -57,6 +57,14 @@ allSelects.forEach((select) => {
   });
 });
 
+//改變credit之後,gpa也要更新
+let credits = document.querySelectorAll(".class-credit");
+credits.forEach((credit) => {
+  credit.addEventListener("change", () => {
+    setGPA(); //當credit發生變化時也會執行setGPA();
+  });
+});
+
 function changeColor(target) {
   if (target.value == "A" || target.value == "A-") {
     target.style.backgroundColor = "green";
