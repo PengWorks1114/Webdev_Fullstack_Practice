@@ -154,9 +154,6 @@ function setGPA() {
     }
   }
 
-  console.log("sum:" + sum);
-  console.log("creditSum:" + creditSum);
-
   //gpa的計算結果
   let result;
   if (creditSum == 0) {
@@ -358,3 +355,103 @@ allTrash.forEach((trash) => {
     setGPA();
   });
 });
+
+// 排序演算法
+let btn1 = document.querySelector(".sort-descending");
+let btn2 = document.querySelector(".sort-ascending");
+btn1.addEventListener("click", () => {
+  handleSorting("descending"); //大到小
+});
+btn2.addEventListener("click", () => {
+  handleSorting("ascending"); //小到大
+});
+
+function handleSorting(direction) {
+  // 先去抓幾筆資料(div.grader)
+  let graders = document.querySelectorAll("div.grader");
+  let objectArray = [];
+  //用一個forloop去跑 來看處裡面有些什麼
+  for (let i = 0; i < graders.length; i++) {
+    let class_name = graders[i].children[0].value; // 這個children會給我們htmlcollection,我們可以用index的方式去拿資料,[0]就是classcategory位置的資料(classcategory)
+    let class_number = graders[i].children[1].value; // class number
+    let class_credit = graders[i].children[2].value;
+    let class_grade = graders[i].children[3].value;
+    //上面提取了四筆資料,接著再做一個物件class_object
+    //排除empty
+
+    if (
+      !(
+        class_name == "" &&
+        class_number == "" &&
+        class_credit == "" &&
+        class_grade == ""
+      )
+    ) {
+      let class_object = {
+        class_name,
+        class_number,
+        class_credit,
+        class_grade,
+        //js中太常見下面這種宣告了,所以可以直接用上面的宣告方式
+        //   class_name: class_name,
+        //   class_number: class_number,
+        //   class_credit: class_credit,
+        //   class_grade: class_grade,
+      };
+      objectArray.push(class_object); //把剛剛做好的class_object放進去上面的objectArray
+    }
+  }
+
+  // 取得object array後, 我們可以把成績String換成數字
+  for (let i = 0; i < objectArray.length; i++) {
+    objectArray[i].class_grade_number = convertor(objectArray[i].class_grade);
+  }
+
+  objectArray = mergeSort(objectArray);
+  if (direction == "descending") {
+    objectArray = objectArray.reverse();
+  }
+  console.log(objectArray);
+}
+
+function merge(a1, a2) {
+  let result = [];
+  let i = 0;
+  let j = 0;
+
+  while (i < a1.length && j < a2.length) {
+    if (a1[i].class_grade_number > a2[j].class_grade_number) {
+      result.push(a2[j]);
+      j++;
+    } else {
+      result.push(a1[i]);
+      i++;
+    }
+  }
+
+  while (i < a1.length) {
+    result.push(a1[i]);
+    i++;
+  }
+  while (j < a2.length) {
+    result.push(a2[j]);
+    j++;
+  }
+
+  return result;
+}
+
+function mergeSort(arr) {
+  if (arr.length == 0) {
+    return;
+  }
+
+  if (arr.length == 1) {
+    return arr;
+  } else {
+    let middle = Math.floor(arr.length / 2);
+    let left = arr.slice(0, middle);
+    let right = arr.slice(middle, arr.length);
+    return merge(mergeSort(left), mergeSort(right));
+  }
+}
