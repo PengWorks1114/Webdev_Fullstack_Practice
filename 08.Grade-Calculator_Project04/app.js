@@ -166,3 +166,37 @@ function setGPA() {
   }
   document.getElementById("result-gpa").innerText = result;
 }
+
+//接下來進行按下 + button就會執行一次新增
+let addButton = document.querySelector(".plus-btn");
+addButton.addEventListener("click", () => {
+  // 設定監聽器,當按下新增button後執行動作
+  let newForm = document.createElement("form");
+  let newDiv = document.createElement("div"); // 製作出new form後要到index查看form裡面有什麼 也要建立相對物件
+  newDiv.classList.add("grader");
+
+  // 製作五個小元素
+  let newInput1 = document.createElement("input");
+  newInput1.setAttribute("type", "text");
+  newInput1.setAttribute("list", "opt");
+  newInput1.classList.add("class-type");
+
+  let newInput2 = document.createElement("input");
+  newInput2.setAttribute("type", "text");
+  newInput2.classList.add("class-number");
+
+  let newInput3 = document.createElement("input");
+  newInput3.setAttribute("type", "number");
+  newInput3.setAttribute("min", "0");
+  newInput3.setAttribute("max", "6");
+  newInput3.classList.add("class-credit");
+  newInput3.addEventListener("change", () => {
+    setGPA(); //這邊新增的 也要記得去觸發setGPA()
+  });
+
+  newDiv.appendChild(newInput1);
+  newDiv.appendChild(newInput2);
+  newDiv.appendChild(newInput3);
+  newForm.appendChild(newDiv);
+  document.querySelector(".all-inputs").appendChild(newForm);
+});
