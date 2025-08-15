@@ -297,6 +297,15 @@ addButton.addEventListener("click", () => {
 
   newButton.addEventListener("click", (e) => {
     e.preventDefault();
+    e.target.parentElement.parentElement.style.animation =
+      "scaleDown 0.5s ease forwards";
+    e.target.parentElement.parentElement.addEventListener(
+      "animationend",
+      (e) => {
+        e.target.remove();
+        setGPA();
+      }
+    );
   });
 
   newDiv.appendChild(newInput1);
