@@ -152,9 +152,9 @@ function setGPA() {
   //gpa的計算結果
   let result;
   if (creditSum == 0) {
-    result = 0.0; //這裡要先去看計算出來的分母是不是0,如果是的話要直接跳到結果讓他等於0.0,不然會出現NaN,因為分母不能放0做計算
+    result = (0.0).toFixed(2); // 這裡要先去看計算出來的分母是不是0,如果是的話要直接跳到結果讓他等於0.0,不然會出現NaN,因為分母不能放0做計算
   } else {
-    result = sum / creditSum;
+    result = (sum / creditSum).toFixed(2); // 只計算到小數點第二位
   }
   document.getElementById("result-gpa").innerText = result;
 }
