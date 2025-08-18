@@ -415,7 +415,94 @@ function handleSorting(direction) {
   let allInputs = document.querySelector(".all-inputs");
   allInputs.innerHTML = "";
 
-  for (let i = 0; i < allInputs.length; i++) {}
+  //抓取表格裡面的內容 降序升序時排列用
+  for (let i = 0; i < objectArray.length; i++) {
+    allInputs.innerHTML += `<form>
+    <div class="grader">
+        <input
+        type="text"
+        placeholder="class category"
+        class="class-type"
+        list="opt"
+        value=${objectArray[i].class_name}
+        /><!--
+        --><input
+        type="text"
+        placeholder="class number"
+        class="class-number"
+                value=${objectArray[i].class_number}
+        /><!--
+        --><input
+        type="number"
+        placeholder="credits"
+        min="0"
+        max="6"
+        class="class-credit"
+                value=${objectArray[i].class_credit}
+
+        /><!--
+        --><select name="select" class="select">
+        <!-- 成績選單 -->
+        <option value=""></option>
+        <option value="A">A</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B">B</option>
+        <option value="B-">B-</option>
+        <option value="C+">C+</option>
+        <option value="C">C</option>
+        <option value="C-">C-</option>
+        <option value="D+">D+</option>
+        <option value="D">D</option>
+        <option value="D-">D-</option>
+        <option value="F">F</option></select
+        ><!--
+        --><button class="trash-button">
+        <i class="fas fa-trash"></i>
+        </button>
+    </div>
+    </form>`;
+  }
+  //SELECT可以直接用JS更改
+  graders = document.querySelectorAll("div.grader");
+  for (let i = 0; i < graders.length; i++) {
+    graders[i].children[3].value = objectArray[i].class_grade;
+  }
+
+  //select事件監聽
+  let allSelects = document.querySelectorAll("select");
+  allSelects.forEach((select) => {
+    changeColor(select); //select顏色轉換
+    select.addEventListener("change", (e) => {
+      setGPA(); //select和credit都要記得設置setGPA下面才會跟著一起更改
+      changeColor(e.target);
+    });
+  });
+
+  // credit事件監聽
+  let allCredits = document.querySelectorAll(".class-credit");
+  allCredits.forEach((credit) => {
+    credit.addEventListener("change", () => {
+      setGPA();
+    });
+  });
+
+  // 垃圾桶
+  let allTrash = document.querySelectorAll(".trash-button");
+  allTrash.forEach((trash) => {
+    trash.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.target.parentElement.parentElement.style.animation =
+        "scaleDown 0.5s ease forwards";
+      e.target.parentElement.parentElement.addEventListener(
+        "animationend",
+        (e) => {
+          e.target.remove();
+          setGPA();
+        }
+      );
+    });
+  });
 }
 
 function merge(a1, a2) {
