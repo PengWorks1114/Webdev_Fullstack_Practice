@@ -58,3 +58,4 @@ console.log("12" < "2"); // true，只比較第一個字元 "1" vs "2"
   ```js
   console.log(Number("12") < Number("2")); // false
   ```
+  .
