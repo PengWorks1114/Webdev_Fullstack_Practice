@@ -1,1 +1,24 @@
-init
+進階Array Methods
+push, pop, shift, unshift
+
+-arr.map(callbackFN) :
+創建一個新的array,其中填充了在arr中的每個元素上調用callbackFN的結果.
+每次callbackFN執行時, 返回的值都會添加到新array內部.
+
+-arr.find(callbackFN):
+返回arr中滿足callbackFN條件的第一個元素(也就是第一個callbackFN做return true的元素).
+如果沒有值滿足callbackFN條件,則返回undefined.
+
+-arr.filter(callbackFN) :
+過濾出在給定arr中通過在callbackFn會return true的元素.
+Return value 是 A shallow copy of a portion of arr.
+
+-arr.some(callbackFN) :
+給定 callbackFN , 測試arr中是否至少有一個元素,
+通過 callbackFN 的測試(是否至少有一元素會 return true).
+some()的return type是 boolean.
+
+-arr.every(callbackFN) :
+給定 callbackFN , 測試arr中是否所有元素當通過
+callback的測試(是否所有的元素都會return true).
+every()的return type 是 boolean.
