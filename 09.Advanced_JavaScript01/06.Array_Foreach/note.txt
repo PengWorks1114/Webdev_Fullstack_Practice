@@ -4,4 +4,5 @@ Array.prototype.forEach() :
 return value : undefined.
 
 Array.prototype.map() :
--The map() method creates a new array populated with results of calling a provided function on every element in the calling array.
+-The map() method creates a new array populated with results of calling a provided function
+on every element in the calling array.
