@@ -1,1 +1,10 @@
-init
+JavaScript String Comparison:
+JS如同大部分的程式語言一樣,String之間的比較都是採用
+compared lexicographically(字典式的比較法).
+在英文字典中,排列順序都是按照第一個字母升序.
+
+JS的String之間的比較中,在字典順序中比較後面者會大於較前面者.
+例如:
+
+"z" > "y" > .... > "b" > "a"
+"9" > "8" > .... > "2" > "1"
