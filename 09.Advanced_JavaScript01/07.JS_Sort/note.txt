@@ -1,1 +1,23 @@
-init
+JS內建的排序函式:
+若想要把array內部的函數元素由小到大排序,可用JS內建排序的sort()方法.
+sort()方法對array的元素進行就地排序,也就是說,
+array會被永久改變(注意, 絕大多數的JS內建method並不會改變調用此method的變數的值.例如,String的toUpperCase()就是其中一種).
+若希望保留未經過排序的array,則需要先製作一個完整的複製品.
+
+Sort()的語法為:
+sort()
+sort(compareFn)
+
+自己排序函式 vs 內建
+自己:想要優化排序 例如我有上千萬筆資料 要最佳化的話 用自己的比較好
+
+
+compareFn式定義排序順序的函數.如果省略,則將array元素按照JS的預設方式排序.
+若我們要自己提供compareFn,
+則此function需要有兩個parameter a, b,
+而sort()會根據compareFn的return value來決定排序順序.
+
+compareFn(a,b) return value            sort order
+> 0                                     Sort a after b
+< 0                                     Sort a before b
+=== 0                                   Keep original order of a and b
