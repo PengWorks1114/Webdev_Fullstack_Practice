@@ -1,1 +1,25 @@
-init
+Primitive, Reference Data Types:
+在JS的Primitive Data Type代表他們不是Objects.
+每個Primitive Data Types都沒有自己的attributes和methods.
+此外,裝有Primitive Data Types的variable確實擁有數值,
+而不是僅僅是對其述職的記憶體位置的reference.
+
+Objects和array都是Reference Data Type.
+Reference Data Type變數中,
+儲存的值是Reference, 也就是記憶體的位置,指向儲存真實內容的記憶體區塊的位置.
+
+Primitive Coercion:
+既然Primitive Data Type 沒有自己的attributes和methods,
+為何我們使用string.length屬性,或是number.toFixed()這個method呢?
+
+當Primitive Data Type 使用 attributes 和 methods時,
+JS將自動把數值裝箱到wrapper object中, 並改為訪問該wrapper object上的屬性.
+
+例如,"foo".includes("f")會把"foo"放到new String("foo")當中,
+並且執行new String("foo")從String繼承而來的String.prototype.includes().
+
+這種自動裝箱行為在JavaScript代碼中是不可觀察的.這就叫做Primitive Coercion.
+
+如果我們願意,可以在創建string的時候,就使用wrapper object來製作.
+但這樣會造成ram的非必要耗損,且wrapper object製作物件時間遠較製作primitive data type來的更久,
+code完成時間會被拖延,所以mdn強烈不推薦使用這種寫code的方式.
