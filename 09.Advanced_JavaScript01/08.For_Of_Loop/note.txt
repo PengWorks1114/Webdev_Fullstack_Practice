@@ -1,0 +1,14 @@
+for...of Loop 創建一個迴圈, 去循環可迭代對象(iterable)內的每個元素.
+可迭代對象包括: string, array, array-like object (例如: NodeList, HtmlCollection),
+typedArray, Map, Set 和 user-defined的iterable.
+*注意 object並不是iterable.
+
+for (... of ...) {
+
+}
+
+for...in Loop
+for...in Loop創建一個迴圈, 去循環一個JS物件中所有的可枚舉屬性(enumerabel properties).
+對於object, enumerabel properties 就是keys.
+對於array, enumerabel properties 就是indices.
+對於String, enumerabel properties 也是indices.
