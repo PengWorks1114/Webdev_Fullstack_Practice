@@ -411,7 +411,11 @@ function handleSorting(direction) {
   if (direction == "descending") {
     objectArray = objectArray.reverse();
   }
-  console.log(objectArray);
+  //根據object array的內容來更新網頁
+  let allInputs = document.querySelector(".all-inputs");
+  allInputs.innerHTML = "";
+
+  for (let i = 0; i < allInputs.length; i++) {}
 }
 
 function merge(a1, a2) {
