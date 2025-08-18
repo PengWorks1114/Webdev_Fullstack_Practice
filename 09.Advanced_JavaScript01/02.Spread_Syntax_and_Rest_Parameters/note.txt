@@ -1,0 +1,18 @@
+Spread Syntax and Rest Parameters:
+Spread Syntax 允許在需要零個或多個參數 (例如, function invocation) 或元素 (例如,array的內部元素)
+的地方,去擴展array內部的元素.
+
+Spread Syntax的語法為:
+
+myFunction(a, ...interableObj, b)
+[1, ...interableObj, '4', 'five', 6]
+
+Rest Parameters:
+Spread Syntax 以及 Rest Parameters的語法幾乎一模一樣.
+然而, Spread Syntax是擴展array中的元素,
+而Rest Parameters是收集多個元素並將他們"壓縮" 為單個JS array.
+
+Rest Parameters的語法為:
+function f(a, b, ...theArgs) {
+    // ...
+}
