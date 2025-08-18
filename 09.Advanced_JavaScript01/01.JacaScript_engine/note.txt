@@ -1,1 +1,10 @@
-init
+JavaScript其實並不是由任何程式語言撰寫而成.
+由ECMA訂定標準,瀏覽器內部的JS引擎會負責遵從理解與處理JS程式碼.
+
+NaN, Infinity:
+在JS的數字當中,兩個最特別的分別是NaN以及Infinity.兩者資料類型都是number.
+Nan屬性表示Not-A-Number的值.
+當我們嘗試使用String或是其他資料類型進行一些數學計算時候,若無法計數值,就會出現Nan.
+
+Infinity值(正無窮大) 值大於其他任何數值.負無窮大則是-Infinity.
+任何乘以Infinity的正整數都是Infinity,除以Infinity的任何數都是0.
