@@ -1,4 +1,4 @@
-```markdown
+
 # JavaScript Scope 與 Closure
 
 本專案整理了 JavaScript **變數作用域 (Scope)** 與 **閉包 (Closure)** 的觀念，並搭配程式碼範例與筆記進行解說。
