@@ -1,1 +1,24 @@
-init
+Call stack 是JS引擎追蹤本身在調用多個函數的程式碼中位置的機制(資料結構的一種).
+Call stack可以幫助我們知道JS引擎當前正在運行什麼函示,
+以及從該函數中調用了那些函式等.
+
+call - function call
+stack - 後進先出 LIFO - last in first out
+
+其機制為:
+1. 當執行函式f1時, JS引擎將其添加到call stack中, 然後開始執行該函式.
+2. 若該函式內部又調用其他函示f2, 則將函式f2添加到 call stack中, 然後開始執行該函式.
+3. 當f2執行完畢後, JS引擎將其從call stack 中取出, 並且從f1停止的位置繼續執行.
+4. 如果call stack 堆疊過高, 高出記憶體分配給call stack的最大空間, 則導致 "stack overflow"的問題.
+
+
+Recursion:
+在數學上,遞迴關係(Recursion relation)是一種定義數列的方式:
+數列的每一項目定義為前面項的函數. 例如: 我們可以定義數列S :
+1. A base case S(1) = 2
+2. S(n) = 2 · S(n -1) for n >= 2.
+以上面的規則可知, S會是等比數列 2, 4, 8, 16, 32, ...
+程式語言中, 遞迴演算法(recursive algorithm)有相似的概念.
+當一個函是內部,執行自己這個函式.
+這種情況就是遞迴演算法.
+(因此,遞迴演算法絕對會產生call stack).
