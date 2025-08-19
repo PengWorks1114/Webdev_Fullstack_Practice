@@ -1,0 +1,11 @@
+Constructor Function:
+在JavaScript的語法中, 若function 被調用時使用了new關鍵字,
+則function會被當成constructor function來使用.
+Constructor function中的this關鍵字指的是一個新物件的製作.
+New關鍵字可以再分配額外的記憶體給 Constructor function所製作的物件,
+此物件會被自動被constructor function給 return.
+
+透過使用Constructor Function , 我們可以大量製造attributes與methods相似的物件.
+(這就是Java Class當中的constructor語法.)
+
+Constructor Function製作出的每個物件, 是獨立的, 所以會單獨佔據記憶體位置。
