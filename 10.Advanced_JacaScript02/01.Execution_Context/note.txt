@@ -14,8 +14,24 @@ creation phase:
 1.創建global object.(例:瀏覽器中的window object, 或Node.js中的global object).
 2.創建scope.
 3.創建this 關鍵字, 並被綁定至 global object.
-4.將variables, class和function分配至記憶體(電腦的RAM).(hosting步驟)
+4.將variables, class和function分配至記憶體(電腦的RAM).(hoisting步驟)
 
 creation phase結束後, 會進入execution phase:
+1. 逐行(line by line)執行程式碼.
+2. 遇到遞迴時, 則使用call stack 來排定工作順序.
+
+函式執行環境:
+每次的function call, JS引擎也都會創造一個Function Execution Context.
+函示執行環境與全域執行環境非常類似.
+一樣也有creation phase 和 execution phase.
+Argument object 包含了被放入此函式的parameters的數值參照直 (a reference to all the parameters passed into the function)
+
+函式執行環境的creation phase是:
+1.創建argument object
+2.創建scope.(依照closure這個準則)
+3.創建this 關鍵字.
+4.將variables, class和function分配至記憶體(電腦的RAM).(hoisting步驟)
+
+execution phase:
 1. 逐行(line by line)執行程式碼.
 2. 遇到遞迴時, 則使用call stack 來排定工作順序.
