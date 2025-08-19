@@ -1,0 +1,7 @@
+Hoisting:
+JS Hoisting 是指JS引擎在執行代碼之前, 將function, variables 或 class的 declaration移動到其範圍頂部的過程.
+Hoisting的優點之一是, 他允許我們在code中, declare function之前只用這個function.
+(但是要小心, 這個功能只對function declaration 有用)
+Hoisting 也適用於variables, 因此我們可以在 declaration和/或 initialization之前在code中使用variables.
+然而javascript只hoist declaration, 而不是initialization, 也就是說, let x = 10;
+這段程式碼只有let x 會被放到程式碼頂部.
