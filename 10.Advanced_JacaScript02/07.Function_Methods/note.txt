@@ -1,1 +1,9 @@
-init
+Function methods:
+在JS中, function是一種特別的物件.
+(從Prototype Inheritance 可以看出, 所有的 function 都有繼承 Object prototype,
+因此, function 也是 object的一種)。
+
+在JS中的Function.prototype內有以下三個常用的methods:
+1. function.bind(obj) - 將function的this 關鍵字綁定(bind) 為obj
+2. function.call(obj, arg1, /* ..,*/ argN) - 使用給定的obj當作this值來調用函數。arg1, /* ..,*/ argN為optional.
+3. function.apply(obj, argsArray) - 與call 相同, 但 Argument 是使用 Argument array.
