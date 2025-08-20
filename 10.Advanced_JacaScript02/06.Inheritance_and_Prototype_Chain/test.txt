@@ -3,6 +3,39 @@ Inheritance and the Prototype Chain:
 __proto__屬性存放的值是另一個物件。若物件A的__proto__屬性的值是設定成另一個物件B,
 則物件A就繼承了物件B的所有attributes以及methods。
 
+***重要***
 每個constructor function都可以設定prototype屬性
 (Prototype屬性本質上來說,就是一個empty object)。
-所有從constructor function製作出來的物件, 其 __proto__屬性都是自動指向constructor function的prototype屬性。
+所有從constructor function製作出來的物件,
+其 __proto__屬性都是自動指向constructor function的prototype屬性。
+***重要***
+
+例如, constructor function A製作的物件obj,
+如果檢查obj.__proto__ == A.prototype,
+可以看到true。因為obj.__proto__以及A.prototype都是reference data type
+
+因為所有從constructor function製作出來的物件,
+其__proto___屬性都是自動指向constructor function的prototype屬性,
+所物件都會自動繼承所有在constructor function的prototype屬性內定義的 attributes and methods.
+像這樣子從constructor function 的 prototype 屬性繼承的attributes and methods的原理,
+就叫做"Prototype Inheritance"
+
+我們可以根據這個特性,來節省記憶體空間.
+若從constructor function製作出的每個物件都有相似的methods,
+我們可以把methods全部移動到constructor function 屬性內部,
+而不是在個別的物件中重複定義methods.
+
+使用constructor function 來做物件的好處在於:
+1.程式碼容易撰寫且維護. 大量物件可以透過constructor function 來製作.
+2.節省記憶體空間.兩個物件若有可以共用 attributes或methods ,
+但分開製作,則會分別占用記憶體內的不同位置.
+若使用 constructor function 來製作,
+則兩個物件繼承來的 attributes 以及 methods 都是指向記憶體的相同位置,
+所以可以達到節省記憶體的功效.
+
+JS內建的資料類型都有繼承其他的Prototype.
+例如, [1, 2, 3] 這個array繼承了Array prototype, 而Array Prototype又繼承自Object Prototype.
+這種Prototype不斷往上連結的結果就叫做Prototype Chain.
+
+JS中的所有物件最後的 Prototype Chain 都會連到一個叫做
+"Object Prototype"的地方. Object Prototype 是 Prototype Chain 的終點.
