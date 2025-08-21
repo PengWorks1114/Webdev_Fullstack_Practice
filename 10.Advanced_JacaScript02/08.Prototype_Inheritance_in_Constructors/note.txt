@@ -1,0 +1,36 @@
+Prototype Inheritance in Constructors
+一個 constructor function A 可以透過兩個設定來繼承另一個 constructor function B 的 prototype 物件:
+1. 在 constructor function A 的內部執行B.call(this, args1, ..., argsN)。我們可以透過這段程式碼直接將 B 所設定的屬性套給 A 做使用。
+2. 設定 A.prototype = Object.created(B.prototype)。
+Object.create() 可以創建一個全新的物件。
+這樣一來, 所有在 B.prototype 內部的 methods 都可以套用給 A.prototype。
+所有 A.prototype 所設定的額外 methods 都需要寫在 A.prototype = Object.create(B.prototype) 這行程式碼的下方。
+
+例子: 有五台車
+
+車子: constructor function
+共通屬性: years, brand, price
+
+越野車:
+共通屬性: years, brand, price
+自己才有的methods: climb() 登山
+
+休旅車:
+共通屬性: years, brand, price
+自己才有的methods: camp() 露營
+
+防彈車:
+共通屬性: years, brand, price
+自己才有的methods: protect() 保護
+
+賽車:
+共通屬性: years, brand, price
+自己才有的methods: race() 競賽
+
+所以這四輛只要去繼承車子的三個共通屬性 就不用自己在寫一次 只要寫自己才有的屬性就好
+
+不能寫 A.prototype = B.prototype  是因為, constructor.prototype 是 reference data type ,
+如果寫:
+A.prototype = B.protect
+A.prototype.add = function() {...}
+則A, B兩個 prototype 都指向記憶體的相同位置, 且兩個 prototype 都有 add() 這個 methods 了。
