@@ -1,0 +1,20 @@
+Chapter 11 - Version Control:
+*整個電腦由 使用者 Shell Kernel 硬體 相互協助運作的:
+-硬體(Hardware): 整個系統的實體工作者,沒有電力系統的話,cpu,ssd等就無法工作了.
+-核心(kernel): 是內部的核心,聽完Shell的翻譯,再只是硬體要進行的工作.
+-Shell: 是外部的表殼,接收使用者的訊息, 再翻譯給Kernel請他處理.
+-使用者: 將需求或想做的事發出指令給Shell.
+
+Kernel and Shell:
+一般來說, Shell是指作業系統中提供存取核心(Kernel)所提供之服務的程式.
+Shell基本上有兩類:
+1.CLI (command line interface)
+2.GUI (graphical User interface)
+
+Windows中常用的CLI指令:
+cd:change directory
+mkdir: make a new directory
+type nul> "filename.txt": 製作一個新的filename.txt檔案
+cls: clear screen
+dir: list directory content
+Ctrl+C: 強制終止任何正在進行的命令
