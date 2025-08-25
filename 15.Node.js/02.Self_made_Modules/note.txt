@@ -1,1 +1,14 @@
-init
+Node.js Modules 分別有三種:
+1. Node.js 內建的modules, 可以直接拿來使用.
+2. 我們自己製作的 modules.
+3. 網路上第三方製作的modules, 可以通過npm(node package manager) 下載來使用.
+
+Self-made modules
+在Module Wrapper中提供的變數:
+-module變數是個物件, 此物件包含此物件的內部訊息, 包含id, path, exports, parent, filename等等資訊.
+-exports是 module物件的屬性, 本身是個empty object.
+-require是一個function, 可以讀取一個JS文件, 
+執行該文件, 然侯return 這個文件的exports objects.
+
+若娶的是一個資料夾, 則讀取該資料夾內的index.js文件, 
+執行該文件, 然侯return 這個文件的exports objects.
