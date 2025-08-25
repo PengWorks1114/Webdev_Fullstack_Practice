@@ -1,3 +1,6 @@
+
+Static Methods and Attributes in JS
+
 2015引入的JS語法,可以用來取代constructor function。
 Class語法是JS基於現有的prototype Inheritance的語法糖。
 
@@ -7,3 +10,15 @@ Static 關鍵字用於共享給定給class的所有物件一個共享的相同at
 另外,我們可以透過class本身來訪問static variable 或是執行 static method.
 
 Static關鍵字所設定的attribute和method屬於class本身, 不屬於每個由class所製造出的物件.
+
+JS當中的內建Class(or constructor function) 有許多 static properties,
+static methods, instance properties, instance methods.
+
+例如, Array的 Array.isArray() 就是 Array Class 的 static method ,
+可用來確認某個資料是不是Array.
+
+若我們用typeof operator 確認 array 的資料類型, 就只能看到object.
+因此, 要確認某個變數是否為array , 必須用Array.isArray().
+
+另一個例子, Math Class 內部所有的 properties 以及 methods 都是 Static,
+所以我們可以用Math.E, Math.PI, Math.floor()等等的功能.
