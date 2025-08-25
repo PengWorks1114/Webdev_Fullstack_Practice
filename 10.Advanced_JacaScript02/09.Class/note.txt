@@ -1,1 +1,9 @@
-init
+2015引入的JS語法,可以用來取代constructor function。
+Class語法是JS基於現有的prototype Inheritance的語法糖。
+
+若一個constructor 要繼承另一個 constructor的 prototype物件, 則可使用extends關鍵字。
+
+Static 關鍵字用於共享給定給class的所有物件一個共享的相同attribute或method.
+另外,我們可以透過class本身來訪問static variable 或是執行 static method.
+
+Static關鍵字所設定的attribute和method屬於class本身, 不屬於每個由class所製造出的物件.
