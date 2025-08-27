@@ -1,0 +1,64 @@
+IP地址 ip address internet protocol address
+稱為網際網路協定位置 是網際協定中用於標誌傳送或接收資料的裝置的一串數字
+(相當於每個在網路上的的電腦的地址)
+
+常見的ip位置分為IPv4與IPv6兩大類, IP位址由一串數字組成.
+IPv4為32位元長, 通常書寫時已四組十斤位數字組成, 並以點分隔, ex: 712.16.254.1
+IPv6為128位元長, 通常書寫時以八組十六進為數字組成,
+以冒號分割, 如2001:db:8:0:1234:0:567:8:1
+
+IPv4中的每8個digit都會被轉換為0到255之間的整數
+因此, IPv4通常是168.1.7.0 而不是10101000.00000001.00000111.00000000
+用前者更容易讓人記憶.
+
+domain name system , 縮寫: DNS, 是網際網路的一項服務,
+他將作為域名(Domain Name) 和 IP位址相互對映的一個分散式資料庫,
+能夠使人更方便地存取網際網路.
+DNS旨在讓人們記住域名,而不是無意義的數字.
+
+例如, 記住www.youtube.com 比記住168.112.0.12更容易:
+
+一個簡單的DNS系統可以是:
+Domain Name     IP address
+youtube.com     168.112.0.15
+example.com     167.3.22.19
+Google.com      168.0.1.3
+
+Port:
+伺服器中的port是網路通訊連接時,邏輯上的端點(endpoint),
+用在伺服器和客戶端點之間交換訊息,
+每個port被分配一個唯一的數字來單獨識別他們,
+一些最常用的端口:
+Port號碼
+20, 21 File Transfer Protocol (FTP). FTP is for transferring files between a client and a server. 拿一個文件
+22 Secure Shell . SHH is one of many protocols that create secure network connections.
+25 Simple Mail Transfer Protocol (SMTP). SMTP　is used for email.
+80 Hypertext Transfer Protocol(HTTP)
+443 HTTP Secure(HTTPS). ALL HTTPS web traffic goes to port 443
+3389 Remote Desktop Protocol (RDP). RDP enables users to remotely connect to their desktop computers form another device
+
+ex: 若google伺服器是https://www.google.com .
+我們希望發出HTTPs Request, 則可以對著 https://www.google.com:443 發出請求,
+即可連線到Google伺服器上面處理HTTPs處理請求的port.
+因為沒有必要顯示, 所以網址後面的: 443 通常在網頁瀏覽器上是看不到的.
+
+另一方面, google伺服器有著24小時不停止運作的腳本語言,在處理任何來自port 443的請求.
+腳本的Pseudocode如下:
+
+app.listen(20, () => {// return a file to client}) // 處理FTP請求
+app.listen(25, () => {// return a email to client}) // 處理SMTP請求
+app.listen(443, () => {// return a webpage to client}) // 處理HTTPs請求
+
+
+localhost:3000
+
+在電腦網路中, localhost(意為"本地主機", 指的是"這台電腦") 是給迴路網絡接口(loopback)的一個標準主機名,
+相對應的ip位址為127.0.0.1(IPv4).
+在DNS中, localhost這個 domain name 會被換成 127.0.0.1
+
+我們可以在自己的電腦上面架設並且運行伺服器.
+當我們要使用同一台電腦連結到在自己的電腦上面伺服器,可以透過寄送請求到localhost到自己的電腦上面
+這就是迴路網絡接口 (loopback).
+
+通常我們在本機上的網頁伺服器, 都是使用port 3000或是8080
+(但基本上, 可以設定任何1000到9999內的任何數字 3389不可以)
