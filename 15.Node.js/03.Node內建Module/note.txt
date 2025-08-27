@@ -1,0 +1,5 @@
+Node.js Modules:
+Node.js 的 modules 分成三種:
+1. Node.js 內建的modules, 可以直接拿來使用
+2. 我們自己製作的modules.
+3. 網路上第三方製作的module, 可以透過npm(node package manager) 下載來使用
