@@ -1,0 +1,16 @@
+Module Wrapper:
+在Node.js當中,Module 是指一組的程式碼, 組織成簡單或複雜功能,
+可被用來與外部其他程式碼連結.
+Module 可以是單個文件, 或是多個文件與資料夾的集合.
+
+在執行module的程式碼之前, Node.js 將使用如下所示的函數包裝器來包裝:
+(function(exports, require, module, _filename, _dirname) {
+    // Module code actually lives in here
+});
+
+這樣做的好處:
+1.讓使用這個module的文件中,所使用的global variable不會被module內部的變數影響.
+2.讓module內部所定義的global variable變成function scope.
+3.讓module內部的JS文件可以使用某些實用的變數,例如module，exports，可以用來輸出本身module,
+而require可以用來獲得其他module。
+4._filename,_dirname等等變數在開發上變得方便,因為兩者包含module的絕對路徑名稱與資料夾路徑。

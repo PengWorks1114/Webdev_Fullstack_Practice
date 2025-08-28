@@ -1,1 +1,43 @@
-init
+HTTP Request and Response Header
+
+HTTP Request 以及 Response 的基本規定格式如下:
+- Request-Line for HTTP Request, Status-Line for HTTP Response
+- Header
+- An empty line indicating the end of the header fields
+- Optionally a message section
+
+Http 中　client 和 server 之間的常見請求:
+
+client →　GET Request　→　server //　如果我要跟伺服器要東西的話
+client →　POST Request　→　server //　如果我要給伺服器東西的話
+client →　PUT Request　→　server //　如果我更新伺服器資料的話
+client →　DELETE Request　→　server //　如果我刪除伺服器資料的話
+
+一個基礎的Get Request會是:
+GET /index.html HTTP/1.1 // GET=>Http verb, /index.html = 要連接的位置, HTTP/1.1 = HTTP協議
+HOST: xxxx.xxx.xxxx.xxx // 我們要去找的伺服器 (就是我們header的部分)
+<BLANK LINE>
+
+一個基礎的Response會是:
+HTTP/1.1 200 OK // status 告訴我可不可以存取
+Content-Length: 1555
+Content-Type: text/html; charset=ISO-8859-1
+
+<!DOCTYPE html>
+<html>
+<body>
+...
+
+如果網頁交出表格資料,且使用GET request的話, 會是:
+GET /index.html?name=Chris&age=24 HTTP/1.1
+HOST: xxxx.xxx.xxxx.xxx
+<BLANK LINE>
+// 我在 <form method = "GET"> 我的資料就會透過表格傳送到http的伺服器端 就會長上面這個樣子
+
+Post Request內部有資料的話, 會是:
+POST /index. HTTP/1.1
+HOST: xxxx.xxx.xxxx.xxx
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 27
+
+filed=value&filed2=value2
